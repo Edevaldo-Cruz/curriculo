@@ -73,6 +73,12 @@ export const SessionPortifolio = styled.div`
 
 export const SessionCareer = styled.div`
   max-width: 100vw;
-  height: 80vh;
+  height: 100vh;
+  text-align: center;
+`;
+
+export const SessionContact = styled.div`
+  max-width: 100vw;
+  height: 100vh;
   text-align: center;
 `;

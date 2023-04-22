@@ -2,6 +2,7 @@ import { Row } from "antd";
 import { FaReact } from "react-icons/fa";
 import { Home } from "../Home";
 import About from "../About";
+import Contact from "../Contact";
 import {
   Container,
   SessionHome,
@@ -12,8 +13,10 @@ import {
   StyledAnchor,
   TextLink,
   SessionCareer,
+  SessionContact,
 } from "./styles";
 import Portifolio from "../Portifolio";
+import Career from "../Career";
 
 export default function Navbar() {
   return (
@@ -71,23 +74,18 @@ export default function Navbar() {
         <SessionHome id="start">
           <Home />
         </SessionHome>
-
         <SessionAbout id="about">
           <About />
         </SessionAbout>
         <SessionPortifolio id="portifolio">
           <Portifolio />
         </SessionPortifolio>
-        <SessionCareer id="career"></SessionCareer>
-        <div
-          id="contact"
-          style={{
-            width: "100vw",
-            height: "100vh",
-            textAlign: "center",
-            background: "#CCD6A6",
-          }}
-        />
+        <SessionCareer id="career">
+          <Career />
+        </SessionCareer>
+        <SessionContact id="contact">
+          <Contact />
+        </SessionContact>
       </div>
     </>
   );
