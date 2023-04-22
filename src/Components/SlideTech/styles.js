@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Col, Row } from "antd";
+import { Col, Row, Link } from "antd";
 import { CgCodeSlash } from "react-icons/cg";
 
 export const Container = styled(Row)`
@@ -11,6 +11,7 @@ export const Container = styled(Row)`
 
 export const ContainerSalutation = styled(Col)`
   width: 100%;
+
   padding-top: 15rem;
 `;
 
@@ -93,7 +94,11 @@ export const BtnWhatsapp = styled.a`
   }
 `;
 
-export const ContainerCard = styled.div``;
+export const ContainerCard = styled(Row)`
+  display: flex;
+  //justify-content: space-between;
+  //width: 100%;
+`;
 
 export const ProfessionCard = styled.div`
   width: 20rem;

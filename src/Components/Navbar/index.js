@@ -1,13 +1,19 @@
 import { Row } from "antd";
 import { FaReact } from "react-icons/fa";
 import { Home } from "../Home";
+import About from "../About";
 import {
   Container,
+  SessionHome,
+  SessionAbout,
+  SessionPortifolio,
   ContainerLogo,
   ContainerAnchor,
   StyledAnchor,
   TextLink,
+  SessionCareer,
 } from "./styles";
+import Portifolio from "../Portifolio";
 
 export default function Navbar() {
   return (
@@ -30,6 +36,7 @@ export default function Navbar() {
         <ContainerAnchor>
           <StyledAnchor
             direction="horizontal"
+            colorPrimary={"#7b4ae2"}
             items={[
               {
                 key: "start",
@@ -47,11 +54,6 @@ export default function Navbar() {
                 title: <TextLink>Portifolio</TextLink>,
               },
               {
-                key: "skills",
-                href: "#skills",
-                title: <TextLink>Skills</TextLink>,
-              },
-              {
                 key: "career",
                 href: "#career",
                 title: <TextLink>Carreira</TextLink>,
@@ -66,54 +68,17 @@ export default function Navbar() {
         </ContainerAnchor>
       </Container>
       <div>
-        <div
-          id="start"
-          style={{
-            width: "100vw",
-            height: "100vh",
-            textAlign: "center",
-            background: "rgba(0,255,0,0.02)",
-          }}
-        >
+        <SessionHome id="start">
           <Home />
-        </div>
+        </SessionHome>
 
-        <div
-          id="about"
-          style={{
-            width: "100vw",
-            height: "100vh",
-            textAlign: "center",
-            background: "pink",
-          }}
-        />
-        <div
-          id="portifolio"
-          style={{
-            width: "100vw",
-            height: "100vh",
-            textAlign: "center",
-            background: "#FFFBE9",
-          }}
-        />
-        <div
-          id="skills"
-          style={{
-            width: "100vw",
-            height: "100vh",
-            textAlign: "center",
-            background: "#F4EAD5",
-          }}
-        />
-        <div
-          id="career"
-          style={{
-            width: "100vw",
-            height: "100vh",
-            textAlign: "center",
-            background: "#DAE2B6",
-          }}
-        />
+        <SessionAbout id="about">
+          <About />
+        </SessionAbout>
+        <SessionPortifolio id="portifolio">
+          <Portifolio />
+        </SessionPortifolio>
+        <SessionCareer id="career"></SessionCareer>
         <div
           id="contact"
           style={{
