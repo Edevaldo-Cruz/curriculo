@@ -14,70 +14,80 @@ import {
   TextLink,
   SessionCareer,
   SessionContact,
+  StyledSpan,
+  TitleNav,
 } from "./styles";
 import Portifolio from "../Portifolio";
 import Career from "../Career";
+import { useEffect, useState } from "react";
+import { Title } from "../About/styles";
 
 export default function Navbar() {
+  const [mobileScreen, setMobileScreen] = useState(false);
+
+  useEffect(() => {
+    function isMobileScreen() {
+      return window.matchMedia("(max-width: 600px)").matches;
+    }
+    if (isMobileScreen()) {
+      setMobileScreen(true);
+    } else {
+      setMobileScreen(false);
+    }
+  }, []);
+
   return (
     <>
       <Container align="middle">
         <ContainerLogo>
           <FaReact size={75} color={"#ffffff"} />
-          <span
-            style={{
-              fontSize: "45px",
-              color: "#ffffff",
-              fontWeight: "600",
-              marginLeft: "10px",
-            }}
-          >
-            Edevaldo Cruz
-          </span>
+          <TitleNav>Edevaldo Cruz</TitleNav>
         </ContainerLogo>
-
-        <ContainerAnchor>
-          <StyledAnchor
-            direction="horizontal"
-            colorPrimary={"#7b4ae2"}
-            items={[
-              {
-                key: "start",
-                href: "#start",
-                title: <TextLink>Inicio</TextLink>,
-              },
-              {
-                key: "about",
-                href: "#about",
-                title: <TextLink>Sobre mim</TextLink>,
-              },
-              {
-                key: "portifolio",
-                href: "#portifolio",
-                title: <TextLink>Portifolio</TextLink>,
-              },
-              {
-                key: "career",
-                href: "#career",
-                title: <TextLink>Carreira</TextLink>,
-              },
-              {
-                key: "contact",
-                href: "#contact",
-                title: <TextLink>Contato</TextLink>,
-              },
-            ]}
-          />
-        </ContainerAnchor>
+        {mobileScreen === false ? (
+          <ContainerAnchor>
+            <StyledAnchor
+              direction="horizontal"
+              items={[
+                {
+                  key: "start",
+                  href: "#start",
+                  title: <TextLink>Inicio</TextLink>,
+                },
+                {
+                  key: "about",
+                  href: "#about",
+                  title: <TextLink>Sobre mim</TextLink>,
+                },
+                {
+                  key: "portifolio",
+                  href: "#portifolio",
+                  title: <TextLink>Portifolio</TextLink>,
+                },
+                {
+                  key: "career",
+                  href: "#career",
+                  title: <TextLink>Carreira</TextLink>,
+                },
+                {
+                  key: "contact",
+                  href: "#contact",
+                  title: <TextLink>Contato</TextLink>,
+                },
+              ]}
+            />
+          </ContainerAnchor>
+        ) : (
+          <></>
+        )}
       </Container>
       <div>
         <SessionHome id="start">
-          <Home />
+          <Home mobileScreen={mobileScreen} />
         </SessionHome>
         <SessionAbout id="about">
           <About />
         </SessionAbout>
-        <SessionPortifolio id="portifolio">
+        {/* <SessionPortifolio id="portifolio">
           <Portifolio />
         </SessionPortifolio>
         <SessionCareer id="career">
@@ -85,7 +95,7 @@ export default function Navbar() {
         </SessionCareer>
         <SessionContact id="contact">
           <Contact />
-        </SessionContact>
+        </SessionContact> */}
       </div>
     </>
   );

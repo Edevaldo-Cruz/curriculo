@@ -11,7 +11,12 @@ export const Container = styled(Row)`
 
 export const ContainerSalutation = styled(Col)`
   width: 100%;
-  padding-top: 15rem;
+  padding-top: 10rem;
+`;
+
+export const ContainerSalutationMobile = styled.div`
+  width: 100%;
+  margin-bottom: 2rem;
 `;
 
 export const Text = styled.p`
@@ -29,37 +34,59 @@ export const HighlightedText = styled.p`
   margin-top: 0;
   margin-bottom: 0;
   text-align: start;
+
+  @media (max-width: 600px) {
+    font-size: 26px;
+  }
 `;
 
 export const SubText = styled.p`
-  font-size: 14px;
+  font-size: 18px;
   color: #ccc;
   font-weight: 700;
-  margin-bottom: 0;
   margin-top: 0;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
   text-align: start;
 `;
 
 export const SocialNetwork = styled.div`
   display: flex;
-  justify-content: start;
+  justify-content: space-around;
+  align-items: center;
+  width: 6rem;
+  height: 2.4rem;
   margin-top: 10px;
+  border-radius: 1rem;
+
+  background-color: rgba(123, 74, 226, 0.5);
 `;
 
-export const BtnSocial = styled.a`
-  /* border: none;
-  background-color: transparent;
-  cursor: pointer; */
-`;
+export const BtnSocial = styled.a``;
 
 export const ContainerPhoto = styled(Col)`
   width: 100%;
-  padding-block: 10rem;
+  height: 540px;
+  padding-top: 6rem;
+`;
+
+export const ContainerPhotoMobile = styled.div`
+  width: 100%;
+  height: 200px;
+  padding-top: 8rem;
 `;
 
 export const ContainerBtn = styled(Col)`
+  display: flex;
+  align-items: end;
   width: 100%;
-  padding-top: 15rem;
+  margin-bottom: 3rem;
+`;
+
+export const ContainerBtnMobile = styled.div`
+  display: flex;
+  align-items: end;
+  width: 100%;
 `;
 
 export const LinkCurriculum = styled.a`
@@ -78,7 +105,7 @@ export const BtnWhatsapp = styled.a`
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 30rem;
+  width: 20rem;
   height: 3rem;
   margin-top: 2rem;
   color: #7b4ae2;
@@ -93,7 +120,13 @@ export const BtnWhatsapp = styled.a`
   }
 `;
 
-export const ContainerCard = styled.div``;
+export const ContainerCard = styled.div`
+  margin-top: 5rem;
+
+  @media (max-width: 600px) {
+    margin-top: 2rem;
+  }
+`;
 
 export const ProfessionCard = styled.div`
   width: 20rem;
@@ -106,8 +139,18 @@ export const ProfessionCard = styled.div`
     background-color: rgba(123, 74, 226, 0.5);
     border: 5px solid #7b4ae2;
   }
+
+  @media (max-width: 600px) {
+    width: 8rem;
+    height: 3.2rem;
+    border: 2.5px solid #ccc;
+  }
 `;
 
 export const TitleCardProfession = styled.h1`
   color: #fff;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 `;

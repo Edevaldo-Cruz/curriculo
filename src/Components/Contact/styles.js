@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100vh;
   padding-inline: 10%;
   z-index: 1;
   padding-block: 8%;
@@ -55,13 +53,39 @@ export const BtnWhatsapp = styled.a`
 `;
 
 export const Email = styled.p`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 22.5rem;
   color: #7b4ae2;
   font-size: 1.5rem;
-  margin-right: 5px;
+  margin-left: 2rem;
   font-weight: 700;
   cursor: pointer;
 
   &:hover {
     color: #ccc;
   }
+`;
+
+export const ContainerBtn = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+`;
+
+export const SocialNetwork = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+`;
+
+export const BtnSocial = styled.a``;
+
+export const Text = styled.p`
+  text-align: center;
+  font-size: 20px;
+  color: #ccc;
+  margin: 0 0 0 35px;
+  margin-bottom: 0.8rem;
 `;

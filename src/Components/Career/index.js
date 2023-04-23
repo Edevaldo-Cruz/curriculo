@@ -104,38 +104,39 @@ export default function Career() {
         <Title>Carreira</Title>
       </ContainerTitle>
       <HighlightedText>Trajetória até aqui</HighlightedText>
-      <div>
-        {/* Bounding box for the Timeline */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            width: "90rem",
-            height: "110px",
-            margin: "2rem",
-            color: "#FFF",
-          }}
-        >
-          <HorizontalTimeline
-            index={value}
-            indexClick={handleIndexClick}
-            values={VALUES}
-            styles={{
-              background: "transparent",
-              foreground: "#FFF",
-              outline: " #7b4ae2",
-              outlineColor: "blue",
-              color: "#FFF",
 
-              backgroundColor: "blue",
-            }}
-          />
-        </div>
-        <Text>
-          {/* Exibindo o texto correspondente ao valor atual de value */}
-          {VALUE_TEXTS[value]}
-        </Text>
+      {/* Bounding box for the Timeline */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          width: "80vw",
+          height: "110px",
+          margin: "2rem",
+          marginInline: "0",
+          color: "#FFF",
+        }}
+      >
+        <HorizontalTimeline
+          index={value}
+          indexClick={handleIndexClick}
+          values={VALUES}
+          styles={{
+            background: "transparent",
+            foreground: "#FFF",
+            outline: " #7b4ae2",
+            outlineColor: "blue",
+            color: "#FFF",
+            width: "80vw",
+
+            backgroundColor: "blue",
+          }}
+        />
       </div>
+      <Text>
+        {/* Exibindo o texto correspondente ao valor atual de value */}
+        {VALUE_TEXTS[value]}
+      </Text>
     </Container>
   );
 }
