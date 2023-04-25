@@ -16,6 +16,8 @@ import {
   SessionContact,
   StyledSpan,
   TitleNav,
+  ContainerLogoMobile,
+  ContainerMobile,
 } from "./styles";
 import Portifolio from "../Portifolio";
 import Career from "../Career";
@@ -38,54 +40,62 @@ export default function Navbar() {
 
   return (
     <>
-      <Container align="middle">
-        <ContainerLogo>
-          <FaReact size={75} color={"#ffffff"} />
-          <TitleNav>Edevaldo Cruz</TitleNav>
-        </ContainerLogo>
-        {mobileScreen === false ? (
-          <ContainerAnchor>
-            <StyledAnchor
-              direction="horizontal"
-              items={[
-                {
-                  key: "start",
-                  href: "#start",
-                  title: <TextLink>Inicio</TextLink>,
-                },
-                {
-                  key: "about",
-                  href: "#about",
-                  title: <TextLink>Sobre mim</TextLink>,
-                },
-                {
-                  key: "portifolio",
-                  href: "#portifolio",
-                  title: <TextLink>Portifolio</TextLink>,
-                },
-                {
-                  key: "career",
-                  href: "#career",
-                  title: <TextLink>Carreira</TextLink>,
-                },
-                {
-                  key: "contact",
-                  href: "#contact",
-                  title: <TextLink>Contato</TextLink>,
-                },
-              ]}
-            />
-          </ContainerAnchor>
-        ) : (
-          <></>
-        )}
-      </Container>
+      {mobileScreen === false ? (
+        <Container align="middle">
+          <>
+            <ContainerLogo>
+              <FaReact size={75} color={"#ffffff"} />
+              <TitleNav>Edevaldo Cruz</TitleNav>
+            </ContainerLogo>
+            <ContainerAnchor>
+              <StyledAnchor
+                direction="horizontal"
+                items={[
+                  {
+                    key: "start",
+                    href: "#start",
+                    title: <TextLink>Inicio</TextLink>,
+                  },
+                  {
+                    key: "about",
+                    href: "#about",
+                    title: <TextLink>Sobre mim</TextLink>,
+                  },
+                  {
+                    key: "portifolio",
+                    href: "#portifolio",
+                    title: <TextLink>Portifolio</TextLink>,
+                  },
+                  {
+                    key: "career",
+                    href: "#career",
+                    title: <TextLink>Carreira</TextLink>,
+                  },
+                  {
+                    key: "contact",
+                    href: "#contact",
+                    title: <TextLink>Contato</TextLink>,
+                  },
+                ]}
+              />
+            </ContainerAnchor>
+          </>
+        </Container>
+      ) : (
+        <ContainerMobile>
+          <ContainerLogoMobile>
+            <FaReact size={55} color={"#ffffff"} />
+            <TitleNav>Edevaldo Cruz</TitleNav>
+          </ContainerLogoMobile>
+        </ContainerMobile>
+      )}
+
       <div>
         <SessionHome id="start">
           <Home mobileScreen={mobileScreen} />
         </SessionHome>
         <SessionAbout id="about">
-          <About />
+          <About mobileScreen={mobileScreen} />
         </SessionAbout>
         {/* <SessionPortifolio id="portifolio">
           <Portifolio />

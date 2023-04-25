@@ -90,7 +90,7 @@ export function Home({ mobileScreen }) {
     });
 
     return () => {
-      anim.destroy(); // Interrompe a animação quando o componente é desmontado
+      anim.destroy();
     };
   }, []);
 

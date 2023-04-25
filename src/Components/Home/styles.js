@@ -12,6 +12,7 @@ export const Container = styled(Row)`
 export const ContainerSalutation = styled(Col)`
   width: 100%;
   padding-top: 10rem;
+  padding-inline: 2%;
 `;
 
 export const ContainerSalutationMobile = styled.div`

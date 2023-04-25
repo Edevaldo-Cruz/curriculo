@@ -12,7 +12,12 @@ export const Container = styled(Row)`
   z-index: 9999;
 
   @media (max-width: 600px) {
-    padding-inline: 1rem;
+    display: flex;
+    justify-content: space-between;
+    // padding-inline: 1rem;
+    width: 100%;
+    height: 5rem;
+    background-color: red;
   }
 `;
 
@@ -21,11 +26,24 @@ export const ContainerLogo = styled(Col)`
   justify-content: start;
   align-items: center;
   width: 50%;
+`;
 
-  @media (max-width: 600px) {
-    justify-content: space-between;
-    width: 100%;
-  }
+export const ContainerMobile = styled.div`
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 5rem;
+  background-color: #1e1e1e;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  z-index: 9999;
+`;
+
+export const ContainerLogoMobile = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
 `;
 
 export const ContainerAnchor = styled(Col)`
@@ -91,6 +109,7 @@ export const TitleNav = styled.span`
   margin-left: 10px;
 
   @media (max-width: 600px) {
-    font-size: 30px;
+    font-size: 25px;
+    //margin-left: 0;
   }
 `;
