@@ -6,6 +6,10 @@ export const Container = styled.div`
   height: 100vh;
   z-index: 1;
   padding-block: 8%;
+
+  @media (max-width: 600px) {
+    margin: 195vw 0;
+  }
 `;
 
 export const Contents = styled.div`
@@ -40,8 +44,12 @@ export const Text = styled.p`
   text-align: start;
   font-size: 18px;
   color: #fff;
-  margin: 0 0 0 35px;
-  margin-bottom: 0.8rem;
+  margin-inline: 1.8rem;
+  margin-block: 1rem;
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 export const ContainerCard = styled.div`
@@ -59,6 +67,13 @@ export const CardJob = styled.div`
   &:hover {
     background-color: rgba(123, 74, 226, 0.5);
     border: 5px solid #7b4ae2;
+  }
+
+  @media (max-width: 600px) {
+    width: 85%;
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -79,15 +94,27 @@ export const Image = styled.div`
   background-image: url(${img});
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 600px) {
+    width: 12rem;
+    height: 10rem;
+  }
 `;
 
 export const ContainerType = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 5rem;
   margin-left: 2rem;
   margin-block: 1rem;
   padding-inline: 10px;
   background-color: rgba(123, 74, 226, 0.4);
   border-radius: 0.3rem;
+
+  @media (max-width: 600px) {
+    width: 3rem;
+  }
 `;
 
 export const Type = styled.p`
@@ -96,15 +123,27 @@ export const Type = styled.p`
   color: #7b4ae2;
   font-weight: 600;
   margin: 0;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+    color: #ccc;
+  }
 `;
 
 export const ContainerOnline = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 5rem;
   margin-left: 2rem;
   margin-block: 1rem;
   padding-inline: 10px;
   background-color: rgba(74, 226, 144, 0.4);
   border-radius: 0.3rem;
+
+  @media (max-width: 600px) {
+    width: 3rem;
+  }
 `;
 
 export const Online = styled.p`
@@ -113,6 +152,11 @@ export const Online = styled.p`
   color: #4ae290;
   font-weight: 600;
   margin: 0;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+    color: #ccc;
+  }
 `;
 
 export const BtnFilter = styled.a`
@@ -120,11 +164,11 @@ export const BtnFilter = styled.a`
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 8rem;
-  height: 3rem;
+  width: 6rem;
+  height: 1.5rem;
   margin-top: 2rem;
   color: #ccc;
-  font-size: 25px;
+  font-size: 18px;
   border: 5px solid #ccc;
   border-radius: 2rem;
   font-weight: 700;
@@ -132,7 +176,13 @@ export const BtnFilter = styled.a`
   &:hover {
     background-color: rgba(123, 74, 226, 0.5);
     border: 5px solid #7b4ae2;
-    color: #7b4ae2;
+    color: #ccc;
+  }
+
+  @media (max-width: 600px) {
+    border: 2px solid #ccc;
+    width: 5.5rem;
+    height: 1.5rem;
   }
 `;
 
@@ -147,5 +197,9 @@ export const LinkGitHub = styled.a`
 
   &:hover {
     color: #ccc;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 12px;
   }
 `;

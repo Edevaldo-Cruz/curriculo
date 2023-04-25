@@ -97,10 +97,10 @@ export default function Navbar() {
         <SessionAbout id="about">
           <About mobileScreen={mobileScreen} />
         </SessionAbout>
-        {/* <SessionPortifolio id="portifolio">
-          <Portifolio />
+        <SessionPortifolio id="portifolio">
+          <Portifolio mobileScreen={mobileScreen} />
         </SessionPortifolio>
-        <SessionCareer id="career">
+        {/* <SessionCareer id="career">
           <Career />
         </SessionCareer>
         <SessionContact id="contact">

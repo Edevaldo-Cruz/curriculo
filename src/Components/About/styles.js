@@ -56,6 +56,7 @@ export const ContainerTitle = styled.div`
   width: 12rem;
   height: 1.8rem;
   padding-left: 10px;
+  margin-left: 10px;
   background-color: rgba(123, 74, 226, 0.4);
   border-radius: 0.3rem;
 
