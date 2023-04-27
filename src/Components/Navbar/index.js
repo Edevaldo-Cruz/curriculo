@@ -100,10 +100,10 @@ export default function Navbar() {
         <SessionPortifolio id="portifolio">
           <Portifolio mobileScreen={mobileScreen} />
         </SessionPortifolio>
-        {/* <SessionCareer id="career">
+        <SessionCareer id="career">
           <Career />
         </SessionCareer>
-        <SessionContact id="contact">
+        {/* <SessionContact id="contact">
           <Contact />
         </SessionContact> */}
       </div>

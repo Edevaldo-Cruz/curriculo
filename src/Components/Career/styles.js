@@ -25,7 +25,7 @@ export const Title = styled.p`
 `;
 
 export const HighlightedText = styled.p`
-  width: 50rem;
+  width: 100%;
   font-size: 56px;
   color: #ffffff;
   font-weight: 700;
@@ -41,4 +41,38 @@ export const Text = styled.p`
   color: #ccc;
   margin: 0 0 0 35px;
   margin-bottom: 0.8rem;
+`;
+
+export const Btn = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 6rem;
+  height: 1.5rem;
+  margin-top: 2rem;
+  color: #ccc;
+  font-size: 18px;
+  border: 5px solid #ccc;
+  border-radius: 2rem;
+  font-weight: 700;
+  margin-inline: 15rem;
+
+  &:hover {
+    background-color: rgba(123, 74, 226, 0.5);
+    border: 5px solid #7b4ae2;
+    color: #ccc;
+  }
+
+  @media (max-width: 600px) {
+    border: 2px solid #ccc;
+    width: 5.5rem;
+    height: 1.5rem;
+  }
+`;
+
+export const ContainerCompanies = styled.div`
+  width: 125px;
+  height: 150px;
+  cursor: pointer;
 `;
