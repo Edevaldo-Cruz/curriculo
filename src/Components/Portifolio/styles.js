@@ -3,13 +3,8 @@ import img from "../../Asset/image.png";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
   z-index: 1;
   padding-block: 8%;
-
-  @media (max-width: 600px) {
-    margin: 195vw 0;
-  }
 `;
 
 export const Contents = styled.div`

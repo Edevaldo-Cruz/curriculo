@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Drawer, Row } from "antd";
+import { Drawer } from "antd";
 import { FaReact, FaRegListAlt } from "react-icons/fa";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 import Home from "../Home";
 import About from "../About";
 import Contact from "../Contact";
@@ -20,6 +21,8 @@ import {
   TitleNav,
   ContainerLogoMobile,
   ContainerMobile,
+  SocialNetwork,
+  BtnSocial,
 } from "./styles";
 
 export default function Navbar() {
@@ -102,6 +105,26 @@ export default function Navbar() {
               open={open}
               zIndex={1000}
               width={"65vw"}
+              footer={
+                <SocialNetwork>
+                  <BtnSocial
+                    href="https://www.linkedin.com/in/edevaldo-cruz-8586a8a4/"
+                    target="_blank"
+                  >
+                    <BsLinkedin
+                      size={25}
+                      color={"#CCC"}
+                      style={{ marginRight: "1rem" }}
+                    />
+                  </BtnSocial>
+                  <BtnSocial
+                    href="https://github.com/Edevaldo-Cruz"
+                    target="_blank"
+                  >
+                    <BsGithub size={25} color={"#CCC"} />
+                  </BtnSocial>
+                </SocialNetwork>
+              }
             >
               <p>
                 <a href="#start">Inicio</a>

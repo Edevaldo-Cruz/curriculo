@@ -2,11 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 100vw;
-  height: 100vh;
-  //padding-inline: 10%;
   z-index: 1;
   padding-block: 8%;
-  margin-top: 5rem;
 `;
 
 export const ContainerTitle = styled.div`
@@ -85,7 +82,6 @@ export const ContainerCompanies = styled.div`
 
 export const ContainerInfo = styled.div`
   width: 80vw;
-  height: 30rem;
   margin-left: auto;
   margin-right: auto;
 `;

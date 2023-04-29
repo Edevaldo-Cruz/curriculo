@@ -3,11 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   padding-inline: 10%;
   z-index: 1;
-  padding-block: 8%;
-
-  @media (max-width: 600px) {
-    margin-top: 8rem;
-  }
 `;
 
 export const ContainerTitle = styled.div`

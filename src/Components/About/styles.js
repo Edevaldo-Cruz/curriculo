@@ -11,10 +11,7 @@ export const Container = styled(Row)`
 
 export const ContainerMobile = styled.div`
   width: 100%;
-  height: 100vh;
-  // margin: 180vw 0;
   z-index: 1;
-  margin-top: 42rem;
 `;
 
 export const ContainerPhoto = styled(Col)`
@@ -35,7 +32,7 @@ export const ContainerPhotoMobile = styled.div`
   background-size: cover;
   background-position: center;
   /* border-radius: 50%; */
-  margin: 5rem 25px;
+  margin: 0 25px;
 `;
 
 export const ContainerContents = styled(Col)`
@@ -49,8 +46,6 @@ export const ContainerContentsMobile = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 60vh;
-  margin-top: 10rem;
 `;
 
 export const ContainerTitle = styled.div`
@@ -61,9 +56,9 @@ export const ContainerTitle = styled.div`
   background-color: rgba(123, 74, 226, 0.4);
   border-radius: 0.3rem;
 
-  @media (max-width: 600px) {
+  /* @media (max-width: 600px) {
     margin-top: 8rem;
-  }
+  } */
 `;
 
 export const Title = styled.p`

@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import { Col, Row } from "antd";
-import { CgCodeSlash } from "react-icons/cg";
 
 export const Container = styled(Row)`
   width: 100%;
-  height: 100vh;
   padding-inline: 10%;
   z-index: 1;
 `;

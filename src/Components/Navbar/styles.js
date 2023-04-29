@@ -75,31 +75,26 @@ export const TextLink = styled.span`
 
 export const SessionHome = styled.div`
   width: 100vw;
-  height: 100vh;
   text-align: center;
 `;
 
 export const SessionAbout = styled.div`
   width: 100vw;
-  height: 70vh;
   text-align: center;
 `;
 
 export const SessionPortifolio = styled.div`
   max-width: 100vw;
-  height: 80vh;
   text-align: center;
 `;
 
 export const SessionCareer = styled.div`
   max-width: 100vw;
-  height: 80vh;
   text-align: center;
 `;
 
 export const SessionContact = styled.div`
   max-width: 100vw;
-  height: 20vh;
   text-align: center;
 `;
 
@@ -111,6 +106,13 @@ export const TitleNav = styled.span`
 
   @media (max-width: 600px) {
     font-size: 25px;
-    //margin-left: 0;
   }
 `;
+
+export const SocialNetwork = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+`;
+
+export const BtnSocial = styled.a``;
