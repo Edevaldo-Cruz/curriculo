@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Drawer } from "antd";
 import { FaReact, FaRegListAlt } from "react-icons/fa";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 import Home from "../Home";
 import About from "../About";
 import Contact from "../Contact";
@@ -23,6 +24,7 @@ import {
   ContainerMobile,
   SocialNetwork,
   BtnSocial,
+  LinkDrawer,
 } from "./styles";
 
 export default function Navbar() {
@@ -99,12 +101,26 @@ export default function Navbar() {
               <FaRegListAlt size={25} color={"#ffffff"} />
             </div>
             <Drawer
-              title="Menu"
+              title={<h1 style={{ color: "#FFF" }}>Menu</h1>}
               placement="right"
               onClose={onClose}
               open={open}
               zIndex={1000}
               width={"65vw"}
+              style={{ backgroundColor: "#333" }}
+              closeIcon={
+                <div
+                  style={{
+                    color: "#FFF",
+                    fontSize: "24px",
+                    position: "absolute",
+                    top: "5%",
+                    right: "8%",
+                  }}
+                >
+                  <AiOutlineCloseCircle size={35} />
+                </div>
+              }
               footer={
                 <SocialNetwork>
                   <BtnSocial
@@ -127,20 +143,19 @@ export default function Navbar() {
               }
             >
               <p>
-                <a href="#start">Inicio</a>
+                <LinkDrawer href="#start">Inicio</LinkDrawer>
               </p>
               <p>
-                <a href="#about">Sobre mim</a>
+                <LinkDrawer href="#about">Sobre mim</LinkDrawer>
               </p>
               <p>
-                <a href="#portifolio">Portifolio</a>
+                <LinkDrawer href="#portifolio">Portifolio</LinkDrawer>
               </p>
               <p>
-                {" "}
-                <a href="#career">Carreira</a>
+                <LinkDrawer href="#career">Carreira</LinkDrawer>
               </p>
               <p>
-                <a href="#contact">Contato</a>
+                <LinkDrawer href="#contact">Contato</LinkDrawer>
               </p>
             </Drawer>
           </ContainerLogoMobile>

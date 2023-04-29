@@ -116,3 +116,9 @@ export const SocialNetwork = styled.div`
 `;
 
 export const BtnSocial = styled.a``;
+
+export const LinkDrawer = styled.a`
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+`;

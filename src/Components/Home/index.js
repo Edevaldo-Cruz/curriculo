@@ -94,12 +94,33 @@ export default function Home({ mobileScreen }) {
     };
   }, []);
 
+  useEffect(() => {
+    const container = document.getElementById("animation-container2");
+    const anim = lottie.loadAnimation({
+      container: container,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: animationData,
+    });
+
+    return () => {
+      anim.destroy();
+    };
+  }, []);
+
   return (
     <>
       {mobileScreen === true ? (
         <Container>
           <ContainerPhotoMobile>
-            <div id="animation-container"></div>
+            <div
+              id="animation-container2"
+              style={{
+                width: "20rem",
+                height: "250px",
+              }}
+            ></div>
           </ContainerPhotoMobile>
 
           <ContainerSalutationMobile>
