@@ -35,7 +35,7 @@ import {
   ContainerBtnMobile,
 } from "./styles";
 
-export function Home({ mobileScreen }) {
+export default function Home({ mobileScreen }) {
   const settings = {
     autoplay: true,
     dots: false,

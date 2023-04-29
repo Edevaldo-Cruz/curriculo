@@ -1,8 +1,11 @@
-import { Row } from "antd";
-import { FaReact } from "react-icons/fa";
-import { Home } from "../Home";
+import { useEffect, useState } from "react";
+import { Drawer, Row } from "antd";
+import { FaReact, FaRegListAlt } from "react-icons/fa";
+import Home from "../Home";
 import About from "../About";
 import Contact from "../Contact";
+import Portifolio from "../Portifolio";
+import Career from "../Career";
 import {
   Container,
   SessionHome,
@@ -14,18 +17,21 @@ import {
   TextLink,
   SessionCareer,
   SessionContact,
-  StyledSpan,
   TitleNav,
   ContainerLogoMobile,
   ContainerMobile,
 } from "./styles";
-import Portifolio from "../Portifolio";
-import Career from "../Career";
-import { useEffect, useState } from "react";
-import { Title } from "../About/styles";
 
 export default function Navbar() {
   const [mobileScreen, setMobileScreen] = useState(false);
+
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     function isMobileScreen() {
@@ -84,8 +90,36 @@ export default function Navbar() {
       ) : (
         <ContainerMobile>
           <ContainerLogoMobile>
-            <FaReact size={55} color={"#ffffff"} />
+            <FaReact size={35} color={"#ffffff"} />
             <TitleNav>Edevaldo Cruz</TitleNav>
+            <div onClick={showDrawer}>
+              <FaRegListAlt size={25} color={"#ffffff"} />
+            </div>
+            <Drawer
+              title="Menu"
+              placement="right"
+              onClose={onClose}
+              open={open}
+              zIndex={1000}
+              width={"65vw"}
+            >
+              <p>
+                <a href="#start">Inicio</a>
+              </p>
+              <p>
+                <a href="#about">Sobre mim</a>
+              </p>
+              <p>
+                <a href="#portifolio">Portifolio</a>
+              </p>
+              <p>
+                {" "}
+                <a href="#career">Carreira</a>
+              </p>
+              <p>
+                <a href="#contact">Contato</a>
+              </p>
+            </Drawer>
           </ContainerLogoMobile>
         </ContainerMobile>
       )}

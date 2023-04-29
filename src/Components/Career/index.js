@@ -221,7 +221,7 @@ export default function Career({ mobileScreen }) {
                 SS Soluções
               </p>
               <p style={{ textAlign: "center", color: "#FFF", marginTop: "0" }}>
-                Maio/2022
+                05/22
               </p>
             </ContainerCompanies>
           </div>
@@ -245,7 +245,7 @@ export default function Career({ mobileScreen }) {
                 Exército Brasileiro
               </p>
               <p style={{ textAlign: "center", color: "#FFF", marginTop: "0" }}>
-                Fev/2017 Jan/2022
+                02/17-01/22
               </p>
             </ContainerCompanies>
           </div>

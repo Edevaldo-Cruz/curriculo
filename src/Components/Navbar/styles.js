@@ -33,16 +33,18 @@ export const ContainerMobile = styled.div`
   display: flex;
   align-items: center;
   width: 100vw;
-  height: 5rem;
+  height: 4rem;
   background-color: #1e1e1e;
   border-bottom: 3px solid rgba(255, 255, 255, 0.2);
-  z-index: 9999;
+  z-index: 999;
 `;
 
 export const ContainerLogoMobile = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
+  margin-inline: 2%;
 `;
 
 export const ContainerAnchor = styled(Col)`

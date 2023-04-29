@@ -12,8 +12,9 @@ export const Container = styled(Row)`
 export const ContainerMobile = styled.div`
   width: 100%;
   height: 100vh;
-  margin: 180vw 0;
+  // margin: 180vw 0;
   z-index: 1;
+  margin-top: 42rem;
 `;
 
 export const ContainerPhoto = styled(Col)`
