@@ -14,6 +14,7 @@ import {
   Text,
 } from "./styles";
 import { Footer } from "antd/es/layout/layout";
+import { notification } from "antd";
 
 export default function Contact() {
   const emailRef = useRef(null);
@@ -28,6 +29,12 @@ export default function Contact() {
     document.execCommand("copy");
     window.getSelection().removeAllRanges();
     setBtn(true);
+    notification.open({
+      message: "E-mail copiado!",
+      description: "O e-mail foi copiado para a área de transferência.",
+      duration: 3,
+      placement: "bottomRight",
+    });
   };
 
   return (
@@ -38,7 +45,7 @@ export default function Contact() {
         </ContainerTitle>
         <HighlightedText>Vamos conversar!</HighlightedText>
         <ContainerBtn>
-          <BtnWhatsapp href="https://wa.me/32988634755?text=Oii,%20acabei%20de%20ver%20seu%20portfólio,%20pode%20conversar?">
+          <BtnWhatsapp href="https://wa.me/32988634755?text=Oii,%20acabei%20de%20ver%20seu%20portfólio,%vamos%20conversar?">
             <BsWhatsapp />
             Vamos conversar
           </BtnWhatsapp>

@@ -17,7 +17,6 @@ export const Container = styled(Row)`
     // padding-inline: 1rem;
     width: 100%;
     height: 5rem;
-    background-color: red;
   }
 `;
 

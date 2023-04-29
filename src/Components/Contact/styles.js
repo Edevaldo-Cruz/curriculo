@@ -4,6 +4,10 @@ export const Container = styled.div`
   padding-inline: 10%;
   z-index: 1;
   padding-block: 8%;
+
+  @media (max-width: 600px) {
+    margin-top: 8rem;
+  }
 `;
 
 export const ContainerTitle = styled.div`
@@ -23,13 +27,17 @@ export const Title = styled.p`
 `;
 
 export const HighlightedText = styled.p`
-  width: 50rem;
   font-size: 56px;
   color: #ffffff;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 2rem;
   text-align: start;
+
+  @media (max-width: 600px) {
+    font-size: 26px;
+    margin-left: 10%;
+  }
 `;
 
 export const BtnWhatsapp = styled.a`
@@ -50,6 +58,14 @@ export const BtnWhatsapp = styled.a`
     color: #ccc;
     border: 2px solid #ccc;
   }
+
+  @media (max-width: 600px) {
+    width: 15rem;
+    height: 1.5rem;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const Email = styled.p`
@@ -66,12 +82,25 @@ export const Email = styled.p`
   &:hover {
     color: #ccc;
   }
+
+  @media (max-width: 600px) {
+    width: 15rem;
+    height: 1.5rem;
+    margin-left: 0;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const ContainerBtn = styled.div`
   display: flex;
   justify-content: center;
   align-items: baseline;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
 `;
 
 export const SocialNetwork = styled.div`

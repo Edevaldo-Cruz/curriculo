@@ -3,14 +3,16 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 100vw;
   height: 100vh;
-  padding-inline: 10%;
+  //padding-inline: 10%;
   z-index: 1;
   padding-block: 8%;
+  margin-top: 5rem;
 `;
 
 export const ContainerTitle = styled.div`
   width: 12rem;
   height: 1.8rem;
+  margin-left: 10%;
   padding-left: 10px;
   background-color: rgba(123, 74, 226, 0.4);
   border-radius: 0.3rem;
@@ -25,13 +27,17 @@ export const Title = styled.p`
 `;
 
 export const HighlightedText = styled.p`
-  width: 100%;
   font-size: 56px;
   color: #ffffff;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 2rem;
   text-align: start;
+
+  @media (max-width: 600px) {
+    font-size: 26px;
+    margin-left: 10%;
+  }
 `;
 
 export const Text = styled.p`
@@ -75,4 +81,32 @@ export const ContainerCompanies = styled.div`
   width: 125px;
   height: 150px;
   cursor: pointer;
+`;
+
+export const ContainerInfo = styled.div`
+  width: 80vw;
+  height: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const TitleMobile = styled.h1`
+  font-size: 22px;
+  margin-bottom: 0;
+`;
+
+export const SubtitleMobile = styled.h2`
+  font-size: 18px;
+  opacity: 0.5;
+  margin: 0;
+`;
+
+export const TextMobile = styled.p`
+  width: 100%;
+  text-align: start;
+  font-size: 14px;
+  color: #ccc;
+  margin: 0 0 0 18px;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
 `;

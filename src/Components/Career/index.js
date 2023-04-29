@@ -13,99 +13,133 @@ import {
   HighlightedText,
   Text,
   Btn,
+  ContainerInfo,
+  TitleMobile,
+  SubtitleMobile,
+  TextMobile,
 } from "./styles";
 import { Row, Col } from "antd";
 
-const VALUE_TEXTS = [
-  <>
-    <Row>
-      <Col span={6}>
-        <img src={PhotoSS} width={"350px"} height={"350px"} alt="logo SS" />
-      </Col>
-      <Col span={18}>
-        <h1>Dev Junior Full stack</h1>
-        <h2 style={{ marginInline: "3%" }}>SS Soluções</h2>
-
-        <Text>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. Lorem Ipsum is simply dummy
-          text of the printing and typesetting industry. Lorem Ipsum has been
-          the industry's standard dummy text ever since the 1500s, when an
-          unknown printer took a galley of type and scrambled it to make a type
-          specimen book. Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book.{" "}
-        </Text>
-      </Col>
-    </Row>
-  </>,
-  <>
-    <Row>
-      <Col span={4}>
-        <img
-          src={PhotoExercito}
-          width={"220px"}
-          height={"350px"}
-          alt="logo SS"
-        />
-      </Col>
-      <Col span={18}>
-        <h1>3º Sargento Tec. Contabilidade</h1>
-        <h2 style={{ marginInline: "3%" }}>Exercito Brasileiro</h2>
-
-        <Text>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. Lorem Ipsum is simply dummy
-          text of the printing and typesetting industry. Lorem Ipsum has been
-          the industry's standard dummy text ever since the 1500s, when an
-          unknown printer took a galley of type and scrambled it to make a type
-          specimen book. Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book.{" "}
-        </Text>
-      </Col>
-    </Row>
-  </>,
-  <>
-    <Row>
-      <Col span={4}>
-        <img src={PhotoDossie} width={"220px"} height={"350px"} alt="logo SS" />
-      </Col>
-      <Col span={18}>
-        <h1>3º Sargento Tec. Contabilidade</h1>
-        <h2 style={{ marginInline: "3%" }}>Exercito Brasileiro</h2>
-
-        <Text>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. Lorem Ipsum is simply dummy
-          text of the printing and typesetting industry. Lorem Ipsum has been
-          the industry's standard dummy text ever since the 1500s, when an
-          unknown printer took a galley of type and scrambled it to make a type
-          specimen book. Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book.{" "}
-        </Text>
-      </Col>
-    </Row>
-  </>,
-  "Novo marco em 2015",
-  "Novo ano de referência em 2019",
-  "Evento especial em 17 de junho de 2019",
-  "Mais uma conquista em agosto de 2019",
-];
-
-export default function Career() {
+export default function Career({ mobileScreen }) {
   const [value, setValue] = useState(0);
   const [previous, setPrevious] = useState(0);
+  const VALUE_TEXTS = [
+    <>
+      {mobileScreen === true ? (
+        <ContainerInfo>
+          <div>
+            <TitleMobile>Dev Junior Full stack</TitleMobile>
+            <SubtitleMobile style={{ marginInline: "3%" }}>
+              SS Soluções
+            </SubtitleMobile>
+            <TextMobile>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. Lorem Ipsum is
+              simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since the
+              1500s, when an unknown printer took a galley of type and scrambled
+              it to make a type specimen book. Lorem Ipsum is simply dummy text
+              of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a
+              type specimen book.{" "}
+            </TextMobile>
+          </div>
+        </ContainerInfo>
+      ) : (
+        <Row>
+          <Col span={6}>
+            <img src={PhotoSS} width={"350px"} height={"350px"} alt="logo SS" />
+          </Col>
+          <Col span={18}>
+            <h1>Dev Junior Full stack</h1>
+            <h2 style={{ marginInline: "3%" }}>SS Soluções</h2>
+
+            <Text>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. Lorem Ipsum is
+              simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since the
+              1500s, when an unknown printer took a galley of type and scrambled
+              it to make a type specimen book. Lorem Ipsum is simply dummy text
+              of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a
+              type specimen book.{" "}
+            </Text>
+          </Col>
+        </Row>
+      )}
+    </>,
+    <>
+      <Row>
+        <Col span={4}>
+          <img
+            src={PhotoExercito}
+            width={"220px"}
+            height={"350px"}
+            alt="logo SS"
+          />
+        </Col>
+        <Col span={18}>
+          <h1>3º Sargento Tec. Contabilidade</h1>
+          <h2 style={{ marginInline: "3%" }}>Exercito Brasileiro</h2>
+
+          <Text>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it to make a
+            type specimen book. Lorem Ipsum is simply dummy text of the printing
+            and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer
+            took a galley of type and scrambled it to make a type specimen book.{" "}
+          </Text>
+        </Col>
+      </Row>
+    </>,
+    <>
+      <Row>
+        <Col span={4}>
+          <img
+            src={PhotoDossie}
+            width={"220px"}
+            height={"350px"}
+            alt="logo SS"
+          />
+        </Col>
+        <Col span={18}>
+          <h1>3º Sargento Tec. Contabilidade</h1>
+          <h2 style={{ marginInline: "3%" }}>Exercito Brasileiro</h2>
+
+          <Text>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it to make a
+            type specimen book. Lorem Ipsum is simply dummy text of the printing
+            and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer
+            took a galley of type and scrambled it to make a type specimen book.{" "}
+          </Text>
+        </Col>
+      </Row>
+    </>,
+    "Novo marco em 2015",
+    "Novo ano de referência em 2019",
+    "Evento especial em 17 de junho de 2019",
+    "Mais uma conquista em agosto de 2019",
+  ];
   const settings = {
     dots: false,
     infinite: false,
@@ -136,7 +170,7 @@ export default function Career() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -161,10 +195,10 @@ export default function Career() {
 
       <div
         style={{
-          width: "100%",
           height: "5rem",
-          borderBottom: "5px solid #ccc",
+          borderBottom: "5px dotted #ccc",
           marginBottom: "6rem",
+          marginInline: "10%",
         }}
       >
         <Slider {...settings}>

@@ -101,11 +101,11 @@ export default function Navbar() {
           <Portifolio mobileScreen={mobileScreen} />
         </SessionPortifolio>
         <SessionCareer id="career">
-          <Career />
+          <Career mobileScreen={mobileScreen} />
         </SessionCareer>
-        {/* <SessionContact id="contact">
+        <SessionContact id="contact">
           <Contact />
-        </SessionContact> */}
+        </SessionContact>
       </div>
     </>
   );
