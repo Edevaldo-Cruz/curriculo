@@ -2,6 +2,7 @@ import { Row } from "antd";
 import Slider from "react-slick";
 import lottie from "lottie-web";
 import animationData from "../../Asset/63487-programming-computer.json";
+import animationReact from "../../Asset/logoReact.json";
 import { useEffect } from "react";
 import { RiReactjsLine, RiGithubLine } from "react-icons/ri";
 import { BsGit } from "react-icons/bs";
@@ -98,10 +99,10 @@ export default function Home({ mobileScreen }) {
     const container = document.getElementById("animation-container2");
     const anim = lottie.loadAnimation({
       container: container,
-      renderer: "svg",
-      loop: true,
+      renderer: "canvas", // usa o renderer "canvas" em vez de "svg"
+      loop: false,
       autoplay: true,
-      animationData: animationData,
+      animationData: animationReact,
     });
 
     return () => {

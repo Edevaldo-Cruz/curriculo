@@ -30,6 +30,7 @@ export const HighlightedText = styled.p`
   margin-top: 0;
   margin-bottom: 2rem;
   text-align: start;
+  margin-left: 10%;
 
   @media (max-width: 600px) {
     font-size: 26px;
