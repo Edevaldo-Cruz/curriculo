@@ -1,3 +1,4 @@
+import { Row } from "antd";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -81,29 +82,30 @@ export const ContainerCompanies = styled.div`
   cursor: pointer;
 `;
 
-export const ContainerInfo = styled.div`
-  width: 80vw;
-  margin-left: auto;
-  margin-right: auto;
-`;
+export const ContainerInfoMobile = styled.div``;
 
 export const TitleMobile = styled.h1`
   font-size: 22px;
   margin-bottom: 0;
+  text-align: center;
 `;
 
 export const SubtitleMobile = styled.h2`
   font-size: 18px;
   opacity: 0.5;
   margin: 0;
+
+  text-align: center;
 `;
 
 export const TextMobile = styled.p`
-  width: 100%;
-  text-align: start;
+  text-align: center;
   font-size: 14px;
   color: #ccc;
-  margin: 0 0 0 18px;
-  margin-bottom: 0.8rem;
   font-weight: 600;
+`;
+
+export const ContainerInfo = styled(Row)`
+  margin-inline: 5%;
+  background-color: rgba(240, 255, 255, 0.2);
 `;

@@ -1,9 +1,11 @@
+import { useEffect } from "react";
 import { Row } from "antd";
 import Slider from "react-slick";
 import lottie from "lottie-web";
+//
+import img from "../../Asset/63487-programming-computer.gif";
 import animationData from "../../Asset/63487-programming-computer.json";
 import animationReact from "../../Asset/logoReact.json";
-import { useEffect } from "react";
 import { RiReactjsLine, RiGithubLine } from "react-icons/ri";
 import { BsGit } from "react-icons/bs";
 import { BsLinkedin, BsGithub, BsDownload, BsWhatsapp } from "react-icons/bs";
@@ -95,33 +97,26 @@ export default function Home({ mobileScreen }) {
     };
   }, []);
 
-  useEffect(() => {
-    const container = document.getElementById("animation-container2");
-    const anim = lottie.loadAnimation({
-      container: container,
-      renderer: "canvas", // usa o renderer "canvas" em vez de "svg"
-      loop: false,
-      autoplay: true,
-      animationData: animationReact,
-    });
-
-    return () => {
-      anim.destroy();
-    };
-  }, []);
-
   return (
     <>
       {mobileScreen === true ? (
         <Container>
           <ContainerPhotoMobile>
             <div
-              id="animation-container2"
               style={{
                 width: "20rem",
                 height: "250px",
               }}
-            ></div>
+            >
+              <img
+                src={img}
+                style={{
+                  width: "20rem",
+                  height: "250px",
+                }}
+                alt="logo"
+              />
+            </div>
           </ContainerPhotoMobile>
 
           <ContainerSalutationMobile>
