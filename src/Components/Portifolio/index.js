@@ -1,4 +1,4 @@
-import { Col, Row } from "antd";
+import { Col, Row, Select } from "antd";
 import Slider from "react-slick";
 import { BsArrowRightShort } from "react-icons/bs";
 import {
@@ -19,8 +19,12 @@ import {
   BtnFilter,
   LinkGitHub,
 } from "./styles";
+import { useState } from "react";
 
 export default function Portifolio({ mobileScreen }) {
+  // const [filter, setFilter] = useState("Todos");
+  // const [showSelectedCards, setShowSelectedCards] = useState(false);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -209,6 +213,13 @@ export default function Portifolio({ mobileScreen }) {
     },
   ];
 
+  // const filteredCards = portifolio.filter((card) => card.language === filter);
+
+  // const handleChange = (value) => {
+  //   setFilter(value);
+  //   console.log(value);
+  // };
+
   return (
     <Container>
       <Contents>
@@ -227,11 +238,40 @@ export default function Portifolio({ mobileScreen }) {
 
           {mobileScreen === false ? (
             <Col span={6}>
-              <Row>
+              {/* <Select
+                defaultValue="Todos"
+                style={{
+                  width: 120,
+                }}
+                onChange={handleChange}
+                options={[
+                  {
+                    value: "Todos",
+                    label: "Todos",
+                  },
+                  {
+                    value: "React",
+                    label: "React",
+                  },
+                  {
+                    value: "React Native",
+                    label: "React Native",
+                  },
+                  {
+                    value: "C#",
+                    label: "C#",
+                  },
+                  {
+                    value: "Kotlin",
+                    label: "Kotlin",
+                  },
+                ]}
+              /> */}
+              {/* <Row>
                 <BtnFilter>Filtro 1</BtnFilter>
                 <BtnFilter>Filtro 2</BtnFilter>
                 <BtnFilter>Filtro 3</BtnFilter>
-              </Row>
+              </Row> */}
             </Col>
           ) : (
             <div style={{ margin: "-55px 0 1rem 0" }}>
@@ -246,6 +286,8 @@ export default function Portifolio({ mobileScreen }) {
 
         <ContainerCard>
           <Slider {...settings}>
+            {/* filteredCards */}
+
             {portifolio.map((card, index) => {
               return (
                 <div key={index}>
