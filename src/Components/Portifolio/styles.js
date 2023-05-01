@@ -69,7 +69,7 @@ export const CardJob = styled.div`
 
   @media (max-width: 600px) {
     width: 85%;
-    height: 20rem;
+    height: 25.5rem;
     margin-left: auto;
     margin-right: auto;
   }
