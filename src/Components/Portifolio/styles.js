@@ -36,11 +36,14 @@ export const Subtitle = styled.p`
 `;
 
 export const Text = styled.p`
-  text-align: start;
+  display: flex;
+  align-items: center;
+  height: 11.5rem;
   font-size: 18px;
   color: #fff;
   margin-inline: 1.8rem;
-  margin-block: 1rem;
+  margin-block: 0 1rem;
+  text-align: center;
 
   @media (max-width: 600px) {
     font-size: 12px;
@@ -54,7 +57,7 @@ export const ContainerCard = styled.div`
 
 export const CardJob = styled.div`
   width: 20rem;
-  height: 25rem;
+  height: 30rem;
   border: 5px solid #ccc;
   border-radius: 1rem;
   padding-block: 1.5rem;
@@ -100,9 +103,7 @@ export const ContainerType = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 5rem;
   margin-left: 2rem;
-  margin-block: 1rem;
   padding-inline: 10px;
   background-color: rgba(123, 74, 226, 0.4);
   border-radius: 0.3rem;
@@ -114,7 +115,7 @@ export const ContainerType = styled.div`
 
 export const Type = styled.p`
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   color: #7b4ae2;
   font-weight: 600;
   margin: 0;
@@ -129,9 +130,7 @@ export const ContainerOnline = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 5rem;
   margin-left: 2rem;
-  margin-block: 1rem;
   padding-inline: 10px;
   background-color: rgba(74, 226, 144, 0.4);
   border-radius: 0.3rem;
@@ -143,7 +142,7 @@ export const ContainerOnline = styled.div`
 
 export const Online = styled.p`
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   color: #4ae290;
   font-weight: 600;
   margin: 0;
