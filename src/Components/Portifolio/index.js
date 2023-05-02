@@ -20,16 +20,18 @@ import {
   LinkGitHub,
 } from "./styles";
 import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Portifolio({ mobileScreen }) {
-  // const [filter, setFilter] = useState("Todos");
-  // const [showSelectedCards, setShowSelectedCards] = useState(false);
+  const [filter, setFilter] = useState();
+  const [filteredCards, setFilteredCards] = useState([]);
+  const [cards, setCards] = useState();
 
   const settings = {
     dots: false,
     infinite: true,
     speed: 1000,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 2,
     adaptiveHeight: true,
     variableWidth: false,
@@ -213,12 +215,22 @@ export default function Portifolio({ mobileScreen }) {
     },
   ];
 
-  // const filteredCards = portifolio.filter((card) => card.language === filter);
+  useEffect(() => {
+    setFilteredCards(
+      filter === "Todos" || filteredCards.length <= 0
+        ? portifolio
+        : portifolio.filter((card) => card.language === filter)
+    );
+  }, [filter]);
 
-  // const handleChange = (value) => {
-  //   setFilter(value);
-  //   console.log(value);
-  // };
+  useEffect(() => {
+    console.log(filteredCards);
+  }, [filteredCards]);
+
+  const handleChange = (value) => {
+    setFilter(value);
+    //console.log(value);
+  };
 
   return (
     <Container>
@@ -238,7 +250,7 @@ export default function Portifolio({ mobileScreen }) {
 
           {mobileScreen === false ? (
             <Col span={6}>
-              {/* <Select
+              <Select
                 defaultValue="Todos"
                 style={{
                   width: 120,
@@ -266,7 +278,7 @@ export default function Portifolio({ mobileScreen }) {
                     label: "Kotlin",
                   },
                 ]}
-              /> */}
+              />
               {/* <Row>
                 <BtnFilter>Filtro 1</BtnFilter>
                 <BtnFilter>Filtro 2</BtnFilter>
@@ -285,33 +297,59 @@ export default function Portifolio({ mobileScreen }) {
         </Row>
 
         <ContainerCard>
-          <Slider {...settings}>
-            {/* filteredCards */}
-
-            {portifolio.map((card, index) => {
-              return (
-                <div key={index}>
-                  <CardJob>
-                    <TitleCard>{card.title}</TitleCard>
-                    <Row>
-                      {card.online === true ? (
-                        <ContainerOnline>
-                          <Online>online</Online>
-                        </ContainerOnline>
-                      ) : (
-                        <></>
-                      )}
-                      <ContainerType>
-                        <Type>{card.language}</Type>
-                      </ContainerType>
-                    </Row>
-                    <Text>{card.description}</Text>
-                    <Image />
-                  </CardJob>
-                </div>
-              );
-            })}
-          </Slider>
+          {filteredCards.length > 4 ? (
+            <Slider {...settings}>
+              {filteredCards.map((card, index) => {
+                return (
+                  <div key={index}>
+                    <CardJob>
+                      <TitleCard>{card.title}</TitleCard>
+                      <Row>
+                        {card.online === true ? (
+                          <ContainerOnline>
+                            <Online>online</Online>
+                          </ContainerOnline>
+                        ) : (
+                          <></>
+                        )}
+                        <ContainerType>
+                          <Type>{card.language}</Type>
+                        </ContainerType>
+                      </Row>
+                      <Text>{card.description}</Text>
+                      <Image />
+                    </CardJob>
+                  </div>
+                );
+              })}
+            </Slider>
+          ) : (
+            <Row>
+              {filteredCards.map((card, index) => {
+                return (
+                  <div key={index}>
+                    <CardJob>
+                      <TitleCard>{card.title}</TitleCard>
+                      <Row>
+                        {card.online === true ? (
+                          <ContainerOnline>
+                            <Online>online</Online>
+                          </ContainerOnline>
+                        ) : (
+                          <></>
+                        )}
+                        <ContainerType>
+                          <Type>{card.language}</Type>
+                        </ContainerType>
+                      </Row>
+                      <Text>{card.description}</Text>
+                      <Image />
+                    </CardJob>
+                  </div>
+                );
+              })}
+            </Row>
+          )}
         </ContainerCard>
         <LinkGitHub href="https://github.com/Edevaldo-Cruz">
           Veja todos meus projetos

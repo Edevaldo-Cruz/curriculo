@@ -47,6 +47,7 @@ export const Text = styled.p`
 
   @media (max-width: 600px) {
     font-size: 12px;
+    height: 6rem;
   }
 `;
 
@@ -68,8 +69,8 @@ export const CardJob = styled.div`
   }
 
   @media (max-width: 600px) {
-    width: 85%;
-    height: 25.5rem;
+    width: 80%;
+    height: 20rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -82,6 +83,10 @@ export const TitleCard = styled.p`
   font-weight: 900;
   margin: 0 0 0 35px;
   margin-bottom: 1rem;
+
+  @media (max-width: 600px) {
+    margin-bottom: 0.8rem;
+  }
 `;
 
 export const Image = styled.div`
@@ -109,7 +114,7 @@ export const ContainerType = styled.div`
   border-radius: 0.3rem;
 
   @media (max-width: 600px) {
-    width: 3rem;
+    margin-bottom: 0.8rem;
   }
 `;
 
