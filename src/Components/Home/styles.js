@@ -72,7 +72,7 @@ export const ContainerPhoto = styled(Col)`
 export const ContainerPhotoMobile = styled.div`
   width: 100%;
   height: 200px;
-  padding-top: 8rem;
+  padding-top: 4rem;
 `;
 
 export const ContainerBtn = styled(Col)`

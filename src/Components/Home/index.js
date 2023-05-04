@@ -103,15 +103,15 @@ export default function Home({ mobileScreen }) {
         <Container>
           <ContainerPhotoMobile>
             <div
-              style={{
-                width: "20rem",
-                height: "250px",
-              }}
+            // style={{
+            //   width: "20rem",
+            //   height: "250px",
+            // }}
             >
               <img
                 src={img}
                 style={{
-                  width: "20rem",
+                  width: "25rem",
                   height: "250px",
                 }}
                 alt="logo"

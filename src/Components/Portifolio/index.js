@@ -25,7 +25,6 @@ import { useEffect } from "react";
 export default function Portifolio({ mobileScreen }) {
   const [filter, setFilter] = useState();
   const [filteredCards, setFilteredCards] = useState([]);
-  const [cards, setCards] = useState();
 
   const settings = {
     dots: false,

@@ -90,7 +90,8 @@ export const Text = styled.p`
   margin-bottom: 0.8rem;
 
   @media (max-width: 600px) {
-    width: 95%;
-    margin: 0 15px;
+    width: 85%;
+    margin-left: "auto";
+    margin-right: "auto";
   }
 `;
