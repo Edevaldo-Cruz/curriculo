@@ -31,7 +31,7 @@ export default function Portifolio({ mobileScreen }) {
     dots: false,
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 2,
     adaptiveHeight: true,
     variableWidth: false,
@@ -59,6 +59,7 @@ export default function Portifolio({ mobileScreen }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          infinite: false,
         },
       },
     ],
@@ -279,25 +280,51 @@ export default function Portifolio({ mobileScreen }) {
                   },
                 ]}
               />
-              {/* <Row>
-                <BtnFilter>Filtro 1</BtnFilter>
-                <BtnFilter>Filtro 2</BtnFilter>
-                <BtnFilter>Filtro 3</BtnFilter>
-              </Row> */}
             </Col>
           ) : (
-            <div style={{ margin: "-55px 0 1rem 0" }}>
-              <Row>
-                <BtnFilter>Filtro 1</BtnFilter>
-                <BtnFilter>Filtro 2</BtnFilter>
-                <BtnFilter>Filtro 3</BtnFilter>
-              </Row>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "end",
+                width: "100%",
+                margin: "0 0 1rem 0",
+              }}
+            >
+              <Select
+                defaultValue="Todos"
+                style={{
+                  width: 120,
+                }}
+                onChange={handleChange}
+                options={[
+                  {
+                    value: "Todos",
+                    label: "Todos",
+                  },
+                  {
+                    value: "React",
+                    label: "React",
+                  },
+                  {
+                    value: "React Native",
+                    label: "React Native",
+                  },
+                  {
+                    value: "C#",
+                    label: "C#",
+                  },
+                  {
+                    value: "Kotlin",
+                    label: "Kotlin",
+                  },
+                ]}
+              />
             </div>
           )}
         </Row>
 
         <ContainerCard>
-          {filteredCards.length > 4 ? (
+          {filteredCards.length > 4 || mobileScreen === true ? (
             <Slider {...settings}>
               {filteredCards.map((card, index) => {
                 return (
@@ -328,7 +355,7 @@ export default function Portifolio({ mobileScreen }) {
               {filteredCards.map((card, index) => {
                 return (
                   <div key={index}>
-                    <CardJob>
+                    <CardJob style={{ marginInline: "1rem" }}>
                       <TitleCard>{card.title}</TitleCard>
                       <Row>
                         {card.online === true ? (

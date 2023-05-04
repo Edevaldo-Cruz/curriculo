@@ -33,6 +33,10 @@ export const Subtitle = styled.p`
   color: #fff;
   font-weight: 900;
   margin: 1rem 0 2rem 35px;
+
+  @media (max-width: 600px) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 export const Text = styled.p`
