@@ -36,6 +36,8 @@ import {
   ContainerPhotoMobile,
   ContainerSalutationMobile,
   ContainerBtnMobile,
+  IconLinkedin,
+  IconGitHub,
 } from "./styles";
 
 export default function Home({ mobileScreen }) {
@@ -102,12 +104,7 @@ export default function Home({ mobileScreen }) {
       {mobileScreen === true ? (
         <Container>
           <ContainerPhotoMobile>
-            <div
-            // style={{
-            //   width: "20rem",
-            //   height: "250px",
-            // }}
-            >
+            <div>
               <img
                 src={img}
                 style={{
@@ -148,17 +145,13 @@ export default function Home({ mobileScreen }) {
                   href="https://www.linkedin.com/in/edevaldo-cruz-8586a8a4/"
                   target="_blank"
                 >
-                  <BsLinkedin
-                    size={25}
-                    color={"#CCC"}
-                    style={{ marginRight: "1rem" }}
-                  />
+                  <IconLinkedin size={25} />
                 </BtnSocial>
                 <BtnSocial
                   href="https://github.com/Edevaldo-Cruz"
                   target="_blank"
                 >
-                  <BsGithub size={25} color={"#CCC"} />
+                  <IconGitHub size={25} />
                 </BtnSocial>
               </SocialNetwork>
             </div>

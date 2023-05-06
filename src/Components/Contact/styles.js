@@ -1,4 +1,6 @@
+import { Footer } from "antd/es/layout/layout";
 import styled from "styled-components";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 
 export const Container = styled.div`
   padding-inline: 10%;
@@ -23,7 +25,7 @@ export const Title = styled.p`
 
 export const HighlightedText = styled.p`
   font-size: 56px;
-  color: #ffffff;
+  color: ${(props) => props.theme.primaryColor};
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 2rem;
@@ -109,7 +111,25 @@ export const BtnSocial = styled.a``;
 export const Text = styled.p`
   text-align: center;
   font-size: 20px;
-  color: #ccc;
+  color: ${(props) => props.theme.colorTextDefault};
   margin: 0 0 0 35px;
   margin-bottom: 0.8rem;
+  font-weight: 600;
+`;
+
+export const ContainerFooter = styled(Footer)`
+  text-align: center;
+  background-color: ${(props) => props.theme.backgroundColor};
+  border-top: 3px solid rgba(255, 255, 255, 0.2);
+`;
+
+export const IconLinkedin = styled(BsLinkedin)`
+  color: ${(props) => props.theme.colorTextDefault};
+  margin-right: 1rem;
+  font-size: 25px;
+`;
+
+export const IconGitHub = styled(BsGithub)`
+  color: ${(props) => props.theme.colorTextDefault};
+  font-size: 25px;
 `;

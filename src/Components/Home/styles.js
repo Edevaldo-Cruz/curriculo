@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Col, Row } from "antd";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 
 export const Container = styled(Row)`
   width: 100%;
@@ -28,7 +29,7 @@ export const Text = styled.p`
 
 export const HighlightedText = styled.p`
   font-size: 56px;
-  color: #ffffff;
+  color: ${(props) => props.theme.primaryColor};
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0;
@@ -41,7 +42,7 @@ export const HighlightedText = styled.p`
 
 export const SubText = styled.p`
   font-size: 18px;
-  color: #ccc;
+  color: ${(props) => props.theme.colorTextDefault};
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 2rem;
@@ -53,12 +54,14 @@ export const SocialNetwork = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 6rem;
+  width: 6.5rem;
   height: 2.4rem;
   margin-top: 10px;
   border-radius: 1rem;
 
-  background-color: rgba(123, 74, 226, 0.5);
+  border: 2px solid rgba(123, 74, 226);
+
+  //background-color: rgba(123, 74, 226);
 `;
 
 export const BtnSocial = styled.a``;
@@ -95,7 +98,7 @@ export const LinkCurriculum = styled.a`
   font-weight: 700;
 
   &:hover {
-    color: #ccc;
+    color: ${(props) => props.theme.colorTextDefault};
   }
 `;
 
@@ -114,7 +117,7 @@ export const BtnWhatsapp = styled.a`
   font-weight: 700;
 
   &:hover {
-    color: #ccc;
+    color: ${(props) => props.theme.colorTextDefault};
     border: 2px solid #ccc;
   }
 `;
@@ -147,9 +150,18 @@ export const ProfessionCard = styled.div`
 `;
 
 export const TitleCardProfession = styled.h1`
-  color: #fff;
+  color: #ccc; //manter essa cor
 
   @media (max-width: 600px) {
     font-size: 16px;
   }
+`;
+
+export const IconLinkedin = styled(BsLinkedin)`
+  color: ${(props) => props.theme.colorTextDefault};
+  margin-right: 1rem;
+`;
+
+export const IconGitHub = styled(BsGithub)`
+  color: ${(props) => props.theme.colorTextDefault};
 `;

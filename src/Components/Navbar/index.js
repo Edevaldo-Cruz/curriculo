@@ -9,7 +9,7 @@ import About from "../About";
 import Contact from "../Contact";
 import Portifolio from "../Portifolio";
 import Career from "../Career";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { darkModeTheme, lightModeTheme } from "../../Global/theme";
 import {
   Container,
@@ -34,17 +34,25 @@ import {
   StyledComponent,
   IconReact,
   IconMenu,
-  ContainerDrawer,
+  TitleDrawer,
+  IconDark,
+  IconLight,
 } from "./styles";
 
 export default function Navbar() {
   const [mobileScreen, setMobileScreen] = useState(false);
   const [darkMode, setDarkmode] = useState(true);
   const [currentTheme, setCurrentTheme] = useState(darkModeTheme);
+  const lightStyle = { backgroundColor: "#fff" };
+  const darkStyle = { backgroundColor: "#333" };
 
   function changeTheme() {
     setDarkmode(!darkMode);
   }
+
+  const ContainerDrawer = styled(Drawer)`
+    background-color: ${currentTheme.backgroundColor};
+  `;
 
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
@@ -134,16 +142,16 @@ export default function Navbar() {
                     <div style={{ width: "25%" }}>
                       {darkMode ? (
                         <BtnMode onClick={changeTheme}>
-                          <MdDarkMode color="#fff" />
+                          <IconDark />
                         </BtnMode>
                       ) : (
                         <BtnMode onClick={changeTheme}>
-                          <MdLightMode color="#fff" />
+                          <IconLight />
                         </BtnMode>
                       )}
                     </div>
                     <div style={{ width: "75%" }}>
-                      <h1 style={{ color: "#FFF" }}>Menu</h1>
+                      <TitleDrawer>Menu</TitleDrawer>
                     </div>
                   </ContainerTitleDrawer>
                 }
@@ -155,7 +163,7 @@ export default function Navbar() {
                 headerStyle={{
                   paddingInline: "0",
                 }}
-                // style={{ backgroundColor: "#333" }}
+                style={darkMode ? darkStyle : lightStyle}
                 closeIcon={
                   <ConatinerBtnClose>
                     <AiOutlineCloseCircle size={35} />

@@ -5,8 +5,6 @@ import PhotoExercito from "../../Asset/exercito.png";
 import PhotoDossie from "../../Asset/dossie.jpg";
 import PhotoSandra from "../../Asset/contabilidade.png";
 import PhotoIndica from "../../Asset/indica.webp";
-import { useRef } from "react";
-
 import {
   Container,
   ContainerTitle,
@@ -20,6 +18,8 @@ import {
   SubtitleMobile,
   TextMobile,
   ContainerInfo,
+  Company,
+  DateCompany,
 } from "./styles";
 import { Row, Col } from "antd";
 
@@ -263,18 +263,8 @@ export default function Career({ mobileScreen }) {
                 alt="logo SS"
                 style={{ marginInline: "auto" }}
               />
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "#FFF",
-                  marginBottom: "0",
-                }}
-              >
-                SS Business
-              </p>
-              <p style={{ textAlign: "center", color: "#FFF", marginTop: "0" }}>
-                05/22
-              </p>
+              <Company>SS Business</Company>
+              <DateCompany style={{}}>05/22</DateCompany>
             </ContainerCompanies>
           </div>
           <div>
@@ -286,18 +276,8 @@ export default function Career({ mobileScreen }) {
                 alt="logo SS"
                 style={{ marginInline: "auto" }}
               />
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "#FFF",
-                  marginBottom: "0",
-                }}
-              >
-                Exército Brasileiro
-              </p>
-              <p style={{ textAlign: "center", color: "#FFF", marginTop: "0" }}>
-                02/17-01/22
-              </p>
+              <Company>Exército Brasileiro</Company>
+              <DateCompany>02/17-01/22</DateCompany>
             </ContainerCompanies>
           </div>
           <div>
@@ -309,18 +289,8 @@ export default function Career({ mobileScreen }) {
                 alt="logo SS"
                 style={{ marginInline: "auto" }}
               />
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "#FFF",
-                  marginBottom: "0",
-                }}
-              >
-                Dossiê Sistemas
-              </p>
-              <p style={{ textAlign: "center", color: "#FFF", marginTop: "0" }}>
-                06/15-02/17
-              </p>
+              <Company>Dossiê Sistemas</Company>
+              <DateCompany>06/15-02/17</DateCompany>
             </ContainerCompanies>
           </div>
           <div>
@@ -332,18 +302,8 @@ export default function Career({ mobileScreen }) {
                 alt="logo SS"
                 style={{ marginInline: "auto" }}
               />
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "#FFF",
-                  marginBottom: "0",
-                }}
-              >
-                Contabilidade Sandra Sant'anna
-              </p>
-              <p style={{ textAlign: "center", color: "#FFF", marginTop: "0" }}>
-                01/14-06/15
-              </p>
+              <Company>Contabilidade Sandra Sant'anna</Company>
+              <DateCompany>01/14-06/15</DateCompany>
             </ContainerCompanies>
           </div>
           <div>
@@ -361,18 +321,8 @@ export default function Career({ mobileScreen }) {
                 alt="logo SS"
                 style={{ marginInline: "auto" }}
               />
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "#FFF",
-                  marginBottom: "0",
-                }}
-              >
-                Indica Assessoria Empresarial
-              </p>
-              <p style={{ textAlign: "center", color: "#FFF", marginTop: "0" }}>
-                01/13-01/14
-              </p>
+              <Company>Indica Assessoria Empresarial</Company>
+              <DateCompany>01/13-01/14</DateCompany>
             </ContainerCompanies>
           </div>
         </Slider>

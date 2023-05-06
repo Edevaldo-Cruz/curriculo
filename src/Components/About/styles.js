@@ -71,7 +71,7 @@ export const Title = styled.p`
 export const Name = styled.p`
   text-align: start;
   font-size: 46px;
-  color: #fff;
+  color: ${(props) => props.theme.primaryColor};
   font-weight: 900;
   margin: 0 0 0 35px;
   margin-bottom: 1rem;
@@ -85,7 +85,7 @@ export const Name = styled.p`
 export const Text = styled.p`
   text-align: start;
   font-size: 18px;
-  color: #ccc;
+  color: ${(props) => props.theme.colorTextDefault};
   margin: 0 0 0 35px;
   margin-bottom: 0.8rem;
 

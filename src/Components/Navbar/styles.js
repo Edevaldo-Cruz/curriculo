@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Anchor, Col, Drawer, Row } from "antd";
+import { Anchor, Col, Row } from "antd";
 import { FaReact, FaRegListAlt } from "react-icons/fa";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 export const StyledComponent = styled.div`
   background-color: ${(props) => props.theme.backgroundColor};
@@ -166,6 +167,14 @@ export const IconMenu = styled(FaRegListAlt)`
   color: ${(props) => props.theme.primaryColor};
 `;
 
-export const ContainerDrawer = styled(Drawer)`
-  background-color: ${(props) => props.theme.backgroundColor};
+export const TitleDrawer = styled.h1`
+  color: ${(props) => props.theme.primaryColor};
+`;
+
+export const IconDark = styled(MdLightMode)`
+  color: ${(props) => props.theme.primaryColor};
+`;
+
+export const IconLight = styled(MdDarkMode)`
+  color: ${(props) => props.theme.primaryColor};
 `;

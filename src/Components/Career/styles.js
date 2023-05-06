@@ -26,7 +26,7 @@ export const Title = styled.p`
 
 export const HighlightedText = styled.p`
   font-size: 56px;
-  color: #ffffff;
+  color: ${(props) => props.theme.primaryColor};
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 2rem;
@@ -43,7 +43,7 @@ export const Text = styled.p`
   width: 80%;
   text-align: start;
   font-size: 20px;
-  color: #ccc;
+  color: ${(props) => props.theme.colorTextDefault};
   margin: 0 0 0 35px;
   margin-bottom: 0.8rem;
 `;
@@ -56,7 +56,7 @@ export const Btn = styled.a`
   width: 6rem;
   height: 1.5rem;
   margin-top: 2rem;
-  color: #ccc;
+  color: ${(props) => props.theme.colorTextDefault};
   font-size: 18px;
   border: 5px solid #ccc;
   border-radius: 2rem;
@@ -66,7 +66,7 @@ export const Btn = styled.a`
   &:hover {
     background-color: rgba(123, 74, 226, 0.5);
     border: 5px solid #7b4ae2;
-    color: #ccc;
+    color: ${(props) => props.theme.colorTextDefault};
   }
 
   @media (max-width: 600px) {
@@ -101,11 +101,23 @@ export const SubtitleMobile = styled.h2`
 export const TextMobile = styled.p`
   text-align: center;
   font-size: 14px;
-  color: #ccc;
+  color: ${(props) => props.theme.colorTextDefault};
   font-weight: 600;
 `;
 
 export const ContainerInfo = styled(Row)`
   margin-inline: 5%;
   background-color: rgba(240, 255, 255, 0.2);
+`;
+
+export const Company = styled.p`
+  text-align: center;
+  color: ${(props) => props.theme.primaryColor};
+  margin-bottom: 0;
+`;
+
+export const DateCompany = styled.p`
+  text-align: center;
+  color: ${(props) => props.theme.primaryColor};
+  margin-top: 0;
 `;

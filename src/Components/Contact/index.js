@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { BsLinkedin, BsGithub, BsWhatsapp } from "react-icons/bs";
 import { MdContentCopy, MdCheck } from "react-icons/md";
+import { notification } from "antd";
 import {
   Container,
   ContainerTitle,
@@ -12,9 +13,10 @@ import {
   SocialNetwork,
   BtnSocial,
   Text,
+  ContainerFooter,
+  IconGitHub,
+  IconLinkedin,
 } from "./styles";
-import { Footer } from "antd/es/layout/layout";
-import { notification } from "antd";
 
 export default function Contact() {
   const emailRef = useRef(null);
@@ -47,7 +49,6 @@ export default function Contact() {
         <ContainerBtn>
           <BtnWhatsapp href="https://wa.me/32988634755?text=Oii,%20acabei%20de%20ver%20seu%20portfólio,%vamos%20conversar?">
             <BsWhatsapp />
-            Vamos conversar
           </BtnWhatsapp>
           <Email ref={emailRef} onClick={handleCopy}>
             {btn === true ? (
@@ -59,30 +60,20 @@ export default function Contact() {
           </Email>
         </ContainerBtn>
       </Container>
-      <Footer
-        style={{
-          textAlign: "center",
-          backgroundColor: "#1e1e1e",
-          borderTop: "3px solid rgba(255, 255, 255, 0.2)",
-        }}
-      >
+      <ContainerFooter>
         <Text>Desenvolvido por Edevaldo Cruz Antonio</Text>
         <SocialNetwork>
           <BtnSocial
             href="https://www.linkedin.com/in/edevaldo-cruz-8586a8a4/"
             target="_blank"
           >
-            <BsLinkedin
-              size={25}
-              color={"#CCC"}
-              style={{ marginRight: "1rem" }}
-            />
+            <IconLinkedin />
           </BtnSocial>
           <BtnSocial href="https://github.com/Edevaldo-Cruz" target="_blank">
-            <BsGithub size={25} color={"#CCC"} />
+            <IconGitHub />
           </BtnSocial>
         </SocialNetwork>
-      </Footer>
+      </ContainerFooter>
     </>
   );
 }

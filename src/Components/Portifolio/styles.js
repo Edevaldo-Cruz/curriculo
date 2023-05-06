@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Contents = styled.div`
-  margin-inline: 10%;
+  margin-inline: 3%;
 `;
 
 export const ContainerTitle = styled.div`
@@ -30,11 +30,13 @@ export const Title = styled.p`
 export const Subtitle = styled.p`
   text-align: start;
   font-size: 46px;
-  color: #fff;
+  color: ${(props) => props.theme.primaryColor};
   font-weight: 900;
   margin: 1rem 0 2rem 35px;
 
   @media (max-width: 600px) {
+    font-size: 26px;
+    margin: 0.2rem 0.5rem;
     margin-bottom: 0.5rem;
   }
 `;
@@ -44,7 +46,7 @@ export const Text = styled.p`
   align-items: center;
   height: 11.5rem;
   font-size: 18px;
-  color: #fff;
+  color: ${(props) => props.theme.primaryColor};
   margin-inline: 1.8rem;
   margin-block: 0 1rem;
   text-align: center;
@@ -83,7 +85,7 @@ export const CardJob = styled.div`
 export const TitleCard = styled.p`
   text-align: start;
   font-size: 16px;
-  color: #fff;
+  color: ${(props) => props.theme.primaryColor};
   font-weight: 900;
   margin: 0 0 0 35px;
   margin-bottom: 1rem;
