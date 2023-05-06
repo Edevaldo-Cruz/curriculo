@@ -1,14 +1,19 @@
 import styled from "styled-components";
-import { Anchor, Col, Row } from "antd";
+import { Anchor, Col, Drawer, Row } from "antd";
+import { FaReact, FaRegListAlt } from "react-icons/fa";
+
+export const StyledComponent = styled.div`
+  background-color: ${(props) => props.theme.backgroundColor};
+`;
 
 export const Container = styled(Row)`
   position: fixed;
   top: 0;
   width: 100vw;
   height: 8rem;
-  background-color: #1e1e1e;
   padding-inline: 5rem;
   border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  background-color: ${(props) => props.theme.backgroundColor};
   z-index: 9999;
 
   @media (max-width: 600px) {
@@ -34,7 +39,7 @@ export const ContainerMobile = styled.div`
   align-items: center;
   width: 100vw;
   height: 4rem;
-  background-color: #1e1e1e;
+  background-color: ${(props) => props.theme.backgroundColor};
   border-bottom: 3px solid rgba(255, 255, 255, 0.2);
   z-index: 999;
 `;
@@ -44,7 +49,7 @@ export const ContainerLogoMobile = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-inline: 2%;
+  margin-inline: 5%;
 `;
 
 export const ContainerAnchor = styled(Col)`
@@ -68,7 +73,7 @@ export const StyledSpan = styled.span`
 `;
 
 export const TextLink = styled.span`
-  color: #ffffff; /* Cor branca */
+  color: ${(props) => props.theme.primaryColor};
   font-weight: 700;
   font-size: 20px;
 `;
@@ -100,7 +105,7 @@ export const SessionContact = styled.div`
 
 export const TitleNav = styled.span`
   font-size: 45px;
-  color: #ffffff;
+  color: ${(props) => props.theme.primaryColor};
   font-weight: 600;
   margin-left: 10px;
 
@@ -120,5 +125,47 @@ export const BtnSocial = styled.a``;
 export const LinkDrawer = styled.a`
   font-size: 22px;
   font-weight: 600;
-  color: #fff;
+  color: ${(props) => props.theme.primaryColor};
+`;
+
+export const ContainerTitleDrawer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+`;
+
+export const BtnMode = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: transparent;
+
+  &:hover {
+    border: 2px solid #7b4ae2;
+  }
+`;
+
+export const ConatinerBtnClose = styled.div`
+  color: ${(props) => props.theme.primaryColor};
+  font-size: 24px;
+  position: absolute;
+  top: 5%;
+  right: 8%;
+`;
+
+export const IconReact = styled(FaReact)`
+  color: ${(props) => props.theme.primaryColor};
+`;
+
+export const IconMenu = styled(FaRegListAlt)`
+  color: ${(props) => props.theme.primaryColor};
+`;
+
+export const ContainerDrawer = styled(Drawer)`
+  background-color: ${(props) => props.theme.backgroundColor};
 `;

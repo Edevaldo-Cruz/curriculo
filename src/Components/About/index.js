@@ -48,21 +48,27 @@ export default function About({ mobileScreen }) {
                   ver mais...
                 </p>
               ) : (
-                <Text>
-                  Recentemente, decidi fazer uma transição de carreira e
-                  atualmente trabalho como Full Stack Junior. Nessa posição, sou
-                  responsável por implementar novas funcionalidades, identificar
-                  e corrigir bugs, manipular bancos de dados, elaborar designs
-                  UX funcionais e realizar modelagem Entidade-Relacionamento
-                  (ER), aplicando conceitos de metodologias ágeis. Estou
-                  empenhado em aprender e crescer constantemente nesse novo
-                  desafio, utilizando minha sólida formação em contabilidade e
-                  minha paixão pela tecnologia para contribuir de forma
-                  significativa para o desenvolvimento de projetos. Estou
-                  animado para aplicar minha experiência diversificada em
-                  diferentes áreas e me dedicar a novos projetos que me permitam
-                  explorar todo o meu potencial.
-                </Text>
+                <>
+                  <Text>
+                    Recentemente, decidi fazer uma transição de carreira e
+                    atualmente trabalho como Full Stack Junior. Nessa posição,
+                    sou responsável por implementar novas funcionalidades,
+                    identificar e corrigir bugs, manipular bancos de dados,
+                    elaborar designs UX funcionais e realizar modelagem
+                    Entidade-Relacionamento (ER), aplicando conceitos de
+                    metodologias ágeis. Estou empenhado em aprender e crescer
+                    constantemente nesse novo desafio, utilizando minha sólida
+                    formação em contabilidade e minha paixão pela tecnologia
+                    para contribuir de forma significativa para o
+                    desenvolvimento de projetos. Estou animado para aplicar
+                    minha experiência diversificada em diferentes áreas e me
+                    dedicar a novos projetos que me permitam explorar todo o meu
+                    potencial.
+                  </Text>
+                  <p onClick={toggleShowFullText} style={{ color: "#7b4ae2" }}>
+                    recolher texto
+                  </p>
+                </>
               )}
             </div>
           </ContainerContentsMobile>

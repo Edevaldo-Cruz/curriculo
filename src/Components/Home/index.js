@@ -111,7 +111,7 @@ export default function Home({ mobileScreen }) {
               <img
                 src={img}
                 style={{
-                  width: "25rem",
+                  width: "100%",
                   height: "250px",
                 }}
                 alt="logo"
