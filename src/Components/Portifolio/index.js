@@ -225,9 +225,9 @@ export default function Portifolio({ mobileScreen }) {
     );
   }, [filter]);
 
-  useEffect(() => {
-    console.log(filteredCards);
-  }, [filteredCards]);
+  // useEffect(() => {
+  //   console.log(filteredCards);
+  // }, [filteredCards]);
 
   const handleChange = (value) => {
     setFilter(value);
