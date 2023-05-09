@@ -42,7 +42,7 @@ export default function Portifolio({ mobileScreen }) {
           slidesToShow: 3,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -51,6 +51,7 @@ export default function Portifolio({ mobileScreen }) {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          arrows: false,
         },
       },
       {
@@ -59,6 +60,7 @@ export default function Portifolio({ mobileScreen }) {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: false,
+          arrows: false,
         },
       },
     ],
@@ -229,7 +231,6 @@ export default function Portifolio({ mobileScreen }) {
 
   const handleChange = (value) => {
     setFilter(value);
-    //console.log(value);
   };
 
   return (

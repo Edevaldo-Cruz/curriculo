@@ -42,7 +42,7 @@ export const BtnWhatsapp = styled.a`
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 30rem;
+  width: 7rem;
   height: 3rem;
   margin-top: 2rem;
   color: #7b4ae2;

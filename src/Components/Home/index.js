@@ -5,7 +5,6 @@ import lottie from "lottie-web";
 //
 import img from "../../Asset/63487-programming-computer.gif";
 import animationData from "../../Asset/63487-programming-computer.json";
-import animationReact from "../../Asset/logoReact.json";
 import { RiReactjsLine, RiGithubLine } from "react-icons/ri";
 import { BsGit } from "react-icons/bs";
 import { BsLinkedin, BsGithub, BsDownload, BsWhatsapp } from "react-icons/bs";
@@ -59,7 +58,8 @@ export default function Home({ mobileScreen }) {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          dots: false,
+          arrows: false,
         },
       },
       {
@@ -68,6 +68,7 @@ export default function Home({ mobileScreen }) {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          arrows: false,
         },
       },
       {
@@ -75,6 +76,7 @@ export default function Home({ mobileScreen }) {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],
@@ -104,16 +106,14 @@ export default function Home({ mobileScreen }) {
       {mobileScreen === true ? (
         <Container>
           <ContainerPhotoMobile>
-            <div>
-              <img
-                src={img}
-                style={{
-                  width: "100%",
-                  height: "250px",
-                }}
-                alt="logo"
-              />
-            </div>
+            <img
+              src={img}
+              style={{
+                width: "80vw",
+                height: "250px",
+              }}
+              alt="logo"
+            />
           </ContainerPhotoMobile>
 
           <ContainerSalutationMobile>

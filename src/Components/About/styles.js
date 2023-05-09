@@ -83,7 +83,7 @@ export const Name = styled.p`
 `;
 
 export const Text = styled.p`
-  text-align: start;
+  text-align: center;
   font-size: 18px;
   color: ${(props) => props.theme.colorTextDefault};
   margin: 0 0 0 35px;

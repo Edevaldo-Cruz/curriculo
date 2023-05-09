@@ -59,7 +59,7 @@ export const Text = styled.p`
 
 export const ContainerCard = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 export const CardJob = styled.div`

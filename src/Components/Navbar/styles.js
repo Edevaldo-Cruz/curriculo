@@ -5,6 +5,7 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 export const StyledComponent = styled.div`
   background-color: ${(props) => props.theme.backgroundColor};
+  width: 100vw;
 `;
 
 export const Container = styled(Row)`
@@ -21,7 +22,7 @@ export const Container = styled(Row)`
     display: flex;
     justify-content: space-between;
     // padding-inline: 1rem;
-    width: 100%;
+    width: 100vw;
     height: 5rem;
   }
 `;
@@ -140,11 +141,18 @@ export const BtnMode = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border: 2px solid #ccc;
   border-radius: 0.5rem;
   background-color: transparent;
+  margin-right: 1rem;
+
+  @media (max-width: 600) {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0;
+  }
 
   &:hover {
     border: 2px solid #7b4ae2;

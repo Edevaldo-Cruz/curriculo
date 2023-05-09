@@ -40,12 +40,16 @@ export const HighlightedText = styled.p`
 `;
 
 export const Text = styled.p`
-  width: 80%;
+  width: 100%;
   text-align: start;
   font-size: 20px;
   color: ${(props) => props.theme.colorTextDefault};
-  margin: 0 0 0 35px;
+  margin-inline: 0;
   margin-bottom: 0.8rem;
+
+  @media (max-width: 600px) {
+    margin-inline: 10%;
+  }
 `;
 
 export const Btn = styled.a`
@@ -82,7 +86,10 @@ export const ContainerCompanies = styled.div`
   cursor: pointer;
 `;
 
-export const ContainerInfoMobile = styled.div``;
+export const ContainerInfoMobile = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 export const TitleMobile = styled.h1`
   font-size: 22px;

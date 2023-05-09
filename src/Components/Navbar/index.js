@@ -93,6 +93,15 @@ export default function Navbar() {
                 <TitleNav>Edevaldo Cruz</TitleNav>
               </ContainerLogo>
               <ContainerAnchor>
+                {darkMode ? (
+                  <BtnMode onClick={changeTheme}>
+                    <IconDark size={35} />
+                  </BtnMode>
+                ) : (
+                  <BtnMode onClick={changeTheme}>
+                    <IconLight size={35} />
+                  </BtnMode>
+                )}
                 <StyledAnchor
                   direction="horizontal"
                   items={[

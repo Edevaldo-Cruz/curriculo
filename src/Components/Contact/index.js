@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { BsLinkedin, BsGithub, BsWhatsapp } from "react-icons/bs";
-import { MdContentCopy, MdCheck } from "react-icons/md";
+import { MdContentCopy, MdCheck, MdOpacity } from "react-icons/md";
 import { notification } from "antd";
 import {
   Container,
@@ -73,6 +73,10 @@ export default function Contact() {
             <IconGitHub />
           </BtnSocial>
         </SocialNetwork>
+        <Text style={{ fontSize: "16px", marginTop: "2rem", opacity: 0.5 }}>
+          "Porque Dele e por Ele, e para Ele, são todas as coisas ..."
+        </Text>
+        <Text style={{ fontSize: "16px", opacity: 0.5 }}>Romanos 11:36</Text>
       </ContainerFooter>
     </>
   );

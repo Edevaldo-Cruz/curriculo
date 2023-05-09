@@ -3,7 +3,7 @@ import { Col, Row } from "antd";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 
 export const Container = styled(Row)`
-  width: 100%;
+  width: 100vw;
   padding-inline: 10%;
   z-index: 1;
 `;
@@ -15,7 +15,7 @@ export const ContainerSalutation = styled(Col)`
 `;
 
 export const ContainerSalutationMobile = styled.div`
-  width: 100%;
+  width: 100vw;
   margin-bottom: 2rem;
 `;
 
@@ -47,7 +47,7 @@ export const SubText = styled.p`
   margin-top: 0;
   margin-bottom: 2rem;
   padding-left: 1.5rem;
-  text-align: start;
+  text-align: center;
 `;
 
 export const SocialNetwork = styled.div`
@@ -58,10 +58,7 @@ export const SocialNetwork = styled.div`
   height: 2.4rem;
   margin-top: 10px;
   border-radius: 1rem;
-
   border: 2px solid rgba(123, 74, 226);
-
-  //background-color: rgba(123, 74, 226);
 `;
 
 export const BtnSocial = styled.a``;
@@ -73,7 +70,7 @@ export const ContainerPhoto = styled(Col)`
 `;
 
 export const ContainerPhotoMobile = styled.div`
-  width: 100%;
+  width: 80vw;
   height: 200px;
   padding-top: 4rem;
 `;
