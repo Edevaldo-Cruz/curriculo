@@ -264,7 +264,7 @@ export default function Career({ mobileScreen }) {
                 style={{ marginInline: "auto" }}
               />
               <Company>SS Business</Company>
-              <DateCompany style={{}}>05/22</DateCompany>
+              <DateCompany>05/22</DateCompany>
             </ContainerCompanies>
           </div>
           <div>
