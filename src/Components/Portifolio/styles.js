@@ -68,6 +68,7 @@ export const CardJob = styled.div`
   border: 5px solid #ccc;
   border-radius: 1rem;
   padding-block: 1.5rem;
+  cursor: pointer;
 
   &:hover {
     background-color: rgba(123, 74, 226, 0.5);

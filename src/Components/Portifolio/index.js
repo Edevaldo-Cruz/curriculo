@@ -78,7 +78,7 @@ export default function Portifolio({ mobileScreen }) {
       description:
         "API que cria pets fictícios dando nome e imagems automaticamente para uma adoção, alem de salvar as informações do adotante.",
       image: "",
-      url: "https://github.com/Edevaldo-Cruz/adopt-pet",
+      url: "https://github.com/Edevaldo-Cruz/adoptPetAPI",
     },
     {
       title: "APIPokemon",
@@ -329,23 +329,25 @@ export default function Portifolio({ mobileScreen }) {
               {filteredCards.map((card, index) => {
                 return (
                   <div key={index}>
-                    <CardJob>
-                      <TitleCard>{card.title}</TitleCard>
-                      <Row>
-                        {card.online === true ? (
-                          <ContainerOnline>
-                            <Online>online</Online>
-                          </ContainerOnline>
-                        ) : (
-                          <></>
-                        )}
-                        <ContainerType>
-                          <Type>{card.language}</Type>
-                        </ContainerType>
-                      </Row>
-                      <Text>{card.description}</Text>
-                      <Image />
-                    </CardJob>
+                    <a href={card.url} style={{ textDecoration: "none" }}>
+                      <CardJob>
+                        <TitleCard>{card.title}</TitleCard>
+                        <Row>
+                          {card.online === true ? (
+                            <ContainerOnline>
+                              <Online>online</Online>
+                            </ContainerOnline>
+                          ) : (
+                            <></>
+                          )}
+                          <ContainerType>
+                            <Type>{card.language}</Type>
+                          </ContainerType>
+                        </Row>
+                        <Text>{card.description}</Text>
+                        <Image />
+                      </CardJob>
+                    </a>
                   </div>
                 );
               })}
@@ -355,23 +357,25 @@ export default function Portifolio({ mobileScreen }) {
               {filteredCards.map((card, index) => {
                 return (
                   <div key={index}>
-                    <CardJob style={{ marginInline: "1rem" }}>
-                      <TitleCard>{card.title}</TitleCard>
-                      <Row>
-                        {card.online === true ? (
-                          <ContainerOnline>
-                            <Online>online</Online>
-                          </ContainerOnline>
-                        ) : (
-                          <></>
-                        )}
-                        <ContainerType>
-                          <Type>{card.language}</Type>
-                        </ContainerType>
-                      </Row>
-                      <Text>{card.description}</Text>
-                      <Image />
-                    </CardJob>
+                    <a href={card.url} style={{ textDecoration: "none" }}>
+                      <CardJob style={{ marginInline: "1rem" }}>
+                        <TitleCard>{card.title}</TitleCard>
+                        <Row>
+                          {card.online === true ? (
+                            <ContainerOnline>
+                              <Online>online</Online>
+                            </ContainerOnline>
+                          ) : (
+                            <></>
+                          )}
+                          <ContainerType>
+                            <Type>{card.language}</Type>
+                          </ContainerType>
+                        </Row>
+                        <Text>{card.description}</Text>
+                        <Image />
+                      </CardJob>
+                    </a>
                   </div>
                 );
               })}
