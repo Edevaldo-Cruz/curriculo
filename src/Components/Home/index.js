@@ -16,6 +16,7 @@ import {
   TbBrandCss3,
   TbBrandFigma,
   TbBrandReactNative,
+  TbBrandKotlin,
 } from "react-icons/tb";
 import {
   Container,
@@ -159,6 +160,14 @@ export default function Home({ mobileScreen }) {
 
           <ContainerBtnMobile>
             <div>
+              <SubText>
+                Não hesite em clicar nos links de WhatsApp e currículo para
+                descobrir mais sobre mim e meu trabalho! Estou animado para
+                compartilhar minhas habilidades e experiências com você e ver
+                como posso ajudar em seu próximo projeto. Não perca a
+                oportunidade de se conectar e explorar como podemos trabalhar
+                juntos
+              </SubText>
               <LinkCurriculum href="https://1drv.ms/b/s!AtWvlvg_BPqhlNdJIECkJIiKiAxd-A?e=X2EA3G">
                 Curriculo
                 <BsDownload size={25} style={{ marginLeft: "10px" }} />
@@ -240,6 +249,10 @@ export default function Home({ mobileScreen }) {
                   <RiGithubLine size={35} color={"#ccc"} />
                   <TitleCardProfession>GitHub</TitleCardProfession>
                 </ProfessionCard>
+                <ProfessionCard>
+                  <TbBrandKotlin size={35} color={"#ccc"} />
+                  <TitleCardProfession>GitHub</TitleCardProfession>
+                </ProfessionCard>
               </div>
             </Slider>
           </ContainerCard>
@@ -296,6 +309,18 @@ export default function Home({ mobileScreen }) {
             </ContainerPhoto>
             <ContainerBtn span={6}>
               <div>
+                <SubText>
+                  Não hesite em clicar nos links de WhatsApp e currículo para
+                  descobrir mais sobre mim e meu trabalho!
+                  <br />
+                  Estou animado para compartilhar minhas habilidades e
+                  experiências com você e ver como posso ajudar em seu próximo
+                  projeto.
+                  <br />
+                  <br />
+                  Não perca a oportunidade de se conectar e explorar como
+                  podemos trabalhar juntos
+                </SubText>
                 <LinkCurriculum href="https://1drv.ms/b/s!AtWvlvg_BPqhlNdJIECkJIiKiAxd-A?e=X2EA3G">
                   Curriculo
                   <BsDownload size={25} style={{ marginLeft: "10px" }} />
