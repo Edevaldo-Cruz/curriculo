@@ -87,6 +87,84 @@ export default function Home({ mobileScreen }) {
     },
   };
 
+  const cards = [
+    <div>
+      <ProfessionCard>
+        <TbBrandJavascript
+          size={mobileScreen === true ? 35 : 70}
+          color={"#ccc"}
+        />
+        <TitleCardProfession>Javascript</TitleCardProfession>
+      </ProfessionCard>
+    </div>,
+    <div>
+      <ProfessionCard>
+        <RiReactjsLine size={mobileScreen === true ? 35 : 70} color={"#ccc"} />
+        <TitleCardProfession>React</TitleCardProfession>
+      </ProfessionCard>
+    </div>,
+    <div>
+      <ProfessionCard>
+        <SiCsharp size={mobileScreen === true ? 35 : 70} color={"#ccc"} />
+        <TitleCardProfession>C#</TitleCardProfession>
+      </ProfessionCard>
+    </div>,
+    <div>
+      <ProfessionCard>
+        <SiMicrosoftsqlserver
+          size={mobileScreen === true ? 35 : 70}
+          color={"#ccc"}
+        />
+        <TitleCardProfession>SQL Server</TitleCardProfession>
+      </ProfessionCard>
+    </div>,
+    <div>
+      <ProfessionCard>
+        <TbBrandReactNative
+          size={mobileScreen === true ? 35 : 70}
+          color={"#ccc"}
+        />
+        <TitleCardProfession>React Native</TitleCardProfession>
+      </ProfessionCard>
+    </div>,
+    <div>
+      <ProfessionCard>
+        <TbBrandHtml5 size={mobileScreen === true ? 35 : 70} color={"#ccc"} />
+        <TitleCardProfession>HTML</TitleCardProfession>
+      </ProfessionCard>
+    </div>,
+    <div>
+      <ProfessionCard>
+        <TbBrandCss3 size={mobileScreen === true ? 35 : 70} color={"#ccc"} />
+        <TitleCardProfession>CSS</TitleCardProfession>
+      </ProfessionCard>
+    </div>,
+    <div>
+      <ProfessionCard>
+        <TbBrandFigma size={mobileScreen === true ? 35 : 70} color={"#ccc"} />
+        <TitleCardProfession>Figma</TitleCardProfession>
+      </ProfessionCard>
+    </div>,
+    <div>
+      <ProfessionCard>
+        <BsGit size={mobileScreen === true ? 35 : 70} color={"#ccc"} />
+        <TitleCardProfession>Git</TitleCardProfession>
+      </ProfessionCard>
+    </div>,
+    <div>
+      <ProfessionCard>
+        <RiGithubLine size={mobileScreen === true ? 35 : 70} color={"#ccc"} />
+        <TitleCardProfession>GitHub</TitleCardProfession>
+      </ProfessionCard>
+    </div>,
+    <div>
+      <ProfessionCard>
+        <TbBrandKotlin size={mobileScreen === true ? 35 : 70} color={"#ccc"} />
+        <TitleCardProfession>Kotlin</TitleCardProfession>
+      </ProfessionCard>
+    </div>,
+  ];
+
   useEffect(() => {
     const container = document.getElementById("animation-container");
     const anim = lottie.loadAnimation({
@@ -96,7 +174,6 @@ export default function Home({ mobileScreen }) {
       autoplay: true,
       animationData: animationData,
     });
-
     return () => {
       anim.destroy();
     };
@@ -188,73 +265,7 @@ export default function Home({ mobileScreen }) {
               trabalho diariamente, assim como outras com as quais desenvolvi
               projetos anteriormente.
             </SubText>
-            <Slider {...settings}>
-              <div>
-                <ProfessionCard>
-                  <TbBrandJavascript size={35} color={"#ccc"} />
-                  <TitleCardProfession>Javascript</TitleCardProfession>
-                </ProfessionCard>
-              </div>
-              <div>
-                <ProfessionCard>
-                  <RiReactjsLine size={35} color={"#ccc"} />
-                  <TitleCardProfession>React</TitleCardProfession>
-                </ProfessionCard>
-              </div>
-
-              <div>
-                <ProfessionCard>
-                  <SiCsharp size={35} color={"#ccc"} />
-                  <TitleCardProfession>C#</TitleCardProfession>
-                </ProfessionCard>
-              </div>
-              <div>
-                <ProfessionCard>
-                  <SiMicrosoftsqlserver size={35} color={"#ccc"} />
-                  <TitleCardProfession>SQL Server</TitleCardProfession>
-                </ProfessionCard>
-              </div>
-              <div>
-                <ProfessionCard>
-                  <TbBrandReactNative size={35} color={"#ccc"} />
-                  <TitleCardProfession>React Native</TitleCardProfession>
-                </ProfessionCard>
-              </div>
-              <div>
-                <ProfessionCard>
-                  <TbBrandHtml5 size={35} color={"#ccc"} />
-                  <TitleCardProfession>HTML</TitleCardProfession>
-                </ProfessionCard>
-              </div>
-              <div>
-                <ProfessionCard>
-                  <TbBrandCss3 size={35} color={"#ccc"} />
-                  <TitleCardProfession>CSS</TitleCardProfession>
-                </ProfessionCard>
-              </div>
-              <div>
-                <ProfessionCard>
-                  <TbBrandFigma size={35} color={"#ccc"} />
-                  <TitleCardProfession>Figma</TitleCardProfession>
-                </ProfessionCard>
-              </div>
-              <div>
-                <ProfessionCard>
-                  <BsGit size={35} color={"#ccc"} />
-                  <TitleCardProfession>Git</TitleCardProfession>
-                </ProfessionCard>
-              </div>
-              <div>
-                <ProfessionCard>
-                  <RiGithubLine size={35} color={"#ccc"} />
-                  <TitleCardProfession>GitHub</TitleCardProfession>
-                </ProfessionCard>
-                <ProfessionCard>
-                  <TbBrandKotlin size={35} color={"#ccc"} />
-                  <TitleCardProfession>GitHub</TitleCardProfession>
-                </ProfessionCard>
-              </div>
-            </Slider>
+            <Slider {...settings}>{cards}</Slider>
           </ContainerCard>
         </Container>
       ) : (
@@ -341,69 +352,7 @@ export default function Home({ mobileScreen }) {
                 trabalho diariamente, assim como outras com as quais desenvolvi
                 projetos anteriormente.
               </SubText>
-              <Slider {...settings}>
-                <div>
-                  <ProfessionCard>
-                    <TbBrandJavascript size={70} color={"#ccc"} />
-                    <TitleCardProfession>Javascript</TitleCardProfession>
-                  </ProfessionCard>
-                </div>
-                <div>
-                  <ProfessionCard>
-                    <RiReactjsLine size={70} color={"#ccc"} />
-                    <TitleCardProfession>React</TitleCardProfession>
-                  </ProfessionCard>
-                </div>
-
-                <div>
-                  <ProfessionCard>
-                    <SiCsharp size={70} color={"#ccc"} />
-                    <TitleCardProfession>C#</TitleCardProfession>
-                  </ProfessionCard>
-                </div>
-                <div>
-                  <ProfessionCard>
-                    <SiMicrosoftsqlserver size={70} color={"#ccc"} />
-                    <TitleCardProfession>SQL Server</TitleCardProfession>
-                  </ProfessionCard>
-                </div>
-                <div>
-                  <ProfessionCard>
-                    <TbBrandReactNative size={70} color={"#ccc"} />
-                    <TitleCardProfession>React Native</TitleCardProfession>
-                  </ProfessionCard>
-                </div>
-                <div>
-                  <ProfessionCard>
-                    <TbBrandHtml5 size={70} color={"#ccc"} />
-                    <TitleCardProfession>HTML</TitleCardProfession>
-                  </ProfessionCard>
-                </div>
-                <div>
-                  <ProfessionCard>
-                    <TbBrandCss3 size={70} color={"#ccc"} />
-                    <TitleCardProfession>CSS</TitleCardProfession>
-                  </ProfessionCard>
-                </div>
-                <div>
-                  <ProfessionCard>
-                    <TbBrandFigma size={70} color={"#ccc"} />
-                    <TitleCardProfession>Figma</TitleCardProfession>
-                  </ProfessionCard>
-                </div>
-                <div>
-                  <ProfessionCard>
-                    <BsGit size={70} color={"#ccc"} />
-                    <TitleCardProfession>Git</TitleCardProfession>
-                  </ProfessionCard>
-                </div>
-                <div>
-                  <ProfessionCard>
-                    <RiGithubLine size={70} color={"#ccc"} />
-                    <TitleCardProfession>GitHub</TitleCardProfession>
-                  </ProfessionCard>
-                </div>
-              </Slider>
+              <Slider {...settings}>{cards}</Slider>
             </ContainerCard>
           </Container>
         </>
