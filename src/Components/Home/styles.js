@@ -47,7 +47,7 @@ export const SubText = styled.p`
   margin-top: 0;
   margin-bottom: 2rem;
   padding-left: 1.5rem;
-  text-align: center;
+  text-align: start;
 `;
 
 export const SocialNetwork = styled.div`

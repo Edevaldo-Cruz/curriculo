@@ -21,6 +21,9 @@ import {
 } from "./styles";
 import { useState } from "react";
 import { useEffect } from "react";
+import { TbBrandReactNative, TbBrandKotlin } from "react-icons/tb";
+import { RiReactjsLine } from "react-icons/ri";
+import { SiCsharp } from "react-icons/si";
 
 export default function Portifolio({ mobileScreen }) {
   const [filter, setFilter] = useState();
@@ -77,7 +80,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "API que cria pets fictícios dando nome e imagems automaticamente para uma adoção, alem de salvar as informações do adotante.",
-      image: "",
+      image: <SiCsharp size={150} />,
       url: "https://github.com/Edevaldo-Cruz/adoptPetAPI",
     },
     {
@@ -86,7 +89,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Projeto React que utiliza a biblioteca Axios para buscar informações da API PokéAPI e exibir dados de pokemons, como imagem, tipo e habilidades.",
-      image: "",
+      image: <TbBrandReactNative size={150} />,
       url: "https://github.com/Edevaldo-Cruz/APIPokemon",
     },
     {
@@ -95,7 +98,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Esse app React Native utiliza uma API para retornar o endereço completo de um usuário a partir do CEP inserido, facilitando a busca por informações de endereço de maneira rápida e fácil.",
-      image: "",
+      image: <TbBrandReactNative size={150} />,
       url: "https://github.com/Edevaldo-Cruz/buscaCEP",
     },
     {
@@ -104,7 +107,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "App Kotlin lista de contatos com efeitos visuais personalizados, busca e detalhes dos contatos cadastrados, tornando a interação mais atraente e intuitiva.",
-      image: "",
+      image: <TbBrandKotlin size={150} />,
       url: "https://github.com/Edevaldo-Cruz/contactList",
     },
     {
@@ -113,7 +116,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Esse projeto em Kotlin calcula o índice de massa corporal (IMC) a partir do peso e altura fornecidos pelo usuário, exibindo uma classificação do resultado. Ideal para quem busca monitorar sua saúde de forma simples e rápida.",
-      image: "",
+      image: <TbBrandKotlin size={150} />,
       url: "https://github.com/Edevaldo-Cruz/APIPokemon",
     },
     {
@@ -122,7 +125,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Essa loja virtual de lanches foi desenvolvida em ASP.NET 6 e possui um módulo administrativo para gerenciar produtos e pedidos.",
-      image: "",
+      image: <SiCsharp size={150} />,
       url: "https://github.com/Edevaldo-Cruz/LanchesMac",
     },
     {
@@ -131,7 +134,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Este aplicativo Android em Kotlin apresenta efeitos visuais personalizados em uma lista de contatos que utiliza o SQLite como banco de dados, permitindo adicionar, editar e excluir contatos com facilidade e eficiência.",
-      image: "",
+      image: <TbBrandKotlin size={150} />,
       url: "https://github.com/Edevaldo-Cruz/ListaDeContatosSQLite",
     },
     {
@@ -140,7 +143,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "API de locadora desenvolvida em ASP.NET e Entity Framework, permitindo a gestão de filmes e clientes através de endpoints RESTful.",
-      image: "",
+      image: <SiCsharp size={150} />,
       url: "https://github.com/Edevaldo-Cruz/LocadoraAPI",
     },
     {
@@ -149,7 +152,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Web app de locadora com ASP.NET 6 e EF para gerenciar locação de filmes, incluindo cadastro de clientes, filmes e devoluções.",
-      image: "",
+      image: <SiCsharp size={150} />,
       url: "https://github.com/Edevaldo-Cruz/LocadoraWeb",
     },
     {
@@ -158,7 +161,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Este aplicativo React Native apresenta uma interface para compra de tênis online, com imagens, detalhes e preços dos produtos disponíveis.",
-      image: "",
+      image: <TbBrandReactNative size={150} />,
       url: "https://github.com/Edevaldo-Cruz/lojaTenis",
     },
     {
@@ -167,7 +170,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Este aplicativo React Native permite que os usuários cadastrem e gerenciem tarefas de forma simples e intuitiva.",
-      image: "",
+      image: <TbBrandReactNative size={150} />,
       url: "https://github.com/Edevaldo-Cruz/lojaTenis",
     },
     {
@@ -176,7 +179,7 @@ export default function Portifolio({ mobileScreen }) {
       online: true,
       description:
         "Projeto React que replica a interface da Netflix, exibindo títulos em destaque.",
-      image: "",
+      image: <RiReactjsLine size={150} />,
       url: "https://ecrz-clone-netflix.netlify.app/",
     },
     {
@@ -185,7 +188,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Este projeto é um clone do aplicativo Spotify, desenvolvido com React Native e Typescript, permitindo ao usuário ouvir músicas.",
-      image: "",
+      image: <TbBrandReactNative size={150} />,
       url: "https://github.com/Edevaldo-Cruz/playMusic",
     },
     {
@@ -194,7 +197,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Este projeto React consome a API PokéAPI para exibir informações de um Pokémon específico, incluindo sua imagem, tipo,",
-      image: "",
+      image: <RiReactjsLine size={150} />,
       url: "https://github.com/Edevaldo-Cruz/pokedexReact",
     },
     {
@@ -203,7 +206,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Portal de notícia baseado no site MSN, criado com o React, Bootstrap/Bootstrap React e Axios para consumir a API_News para obter notícias reais e a API OpenWeather para informações de previsão do tempo do local do usuário.",
-      image: "",
+      image: <RiReactjsLine size={150} />,
       url: "https://github.com/Edevaldo-Cruz/portal_de_noticias",
     },
     {
@@ -212,7 +215,7 @@ export default function Portifolio({ mobileScreen }) {
       online: false,
       description:
         "Este projeto em React permite o cadastro e gerenciamento de tarefas, com opções para adicionar, editar, excluir e marcar tarefas como concluídas, oferecendo uma interface intuitiva e responsiva para os usuários.",
-      image: "",
+      image: <RiReactjsLine size={150} />,
       url: "https://github.com/Edevaldo-Cruz/webTask",
     },
   ];
@@ -345,7 +348,7 @@ export default function Portifolio({ mobileScreen }) {
                           </ContainerType>
                         </Row>
                         <Text>{card.description}</Text>
-                        <Image />
+                        <div>{card.image}</div>
                       </CardJob>
                     </a>
                   </div>
