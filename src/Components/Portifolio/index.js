@@ -10,13 +10,11 @@ import {
   ContainerCard,
   CardJob,
   Text,
-  Image,
   TitleCard,
   ContainerType,
   Type,
   ContainerOnline,
   Online,
-  BtnFilter,
   LinkGitHub,
 } from "./styles";
 import { useState } from "react";
@@ -228,10 +226,6 @@ export default function Portifolio({ mobileScreen }) {
     );
   }, [filter]);
 
-  // useEffect(() => {
-  //   console.log(filteredCards);
-  // }, [filteredCards]);
-
   const handleChange = (value) => {
     setFilter(value);
   };
@@ -376,7 +370,7 @@ export default function Portifolio({ mobileScreen }) {
                           </ContainerType>
                         </Row>
                         <Text>{card.description}</Text>
-                        <Image />
+                        <div>{card.image}</div>
                       </CardJob>
                     </a>
                   </div>

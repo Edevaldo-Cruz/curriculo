@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import img from "../../Asset/image.png";
 
 export const Container = styled.div`
   width: 100%;
@@ -71,8 +70,8 @@ export const CardJob = styled.div`
   cursor: pointer;
 
   &:hover {
-    background-color: rgba(123, 74, 226, 0.5);
-    border: 5px solid #7b4ae2;
+    background-color: rgba(123, 74, 226, 0.1);
+    border: 7px solid #7b4ae2;
   }
 
   @media (max-width: 600px) {
@@ -93,21 +92,6 @@ export const TitleCard = styled.p`
 
   @media (max-width: 600px) {
     margin-bottom: 0.8rem;
-  }
-`;
-
-export const Image = styled.div`
-  width: 18rem;
-  height: 14rem;
-  margin-inline: auto;
-  border-radius: 1rem;
-  background-image: url(${img});
-  background-size: cover;
-  background-position: center;
-
-  @media (max-width: 600px) {
-    width: 12rem;
-    height: 10rem;
   }
 `;
 
@@ -162,33 +146,6 @@ export const Online = styled.p`
   @media (max-width: 600px) {
     font-size: 14px;
     color: #ccc;
-  }
-`;
-
-export const BtnFilter = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 6rem;
-  height: 1.5rem;
-  margin-top: 2rem;
-  color: #ccc;
-  font-size: 18px;
-  border: 5px solid #ccc;
-  border-radius: 2rem;
-  font-weight: 700;
-
-  &:hover {
-    background-color: rgba(123, 74, 226, 0.5);
-    border: 5px solid #7b4ae2;
-    color: #ccc;
-  }
-
-  @media (max-width: 600px) {
-    border: 2px solid #ccc;
-    width: 5.5rem;
-    height: 1.5rem;
   }
 `;
 

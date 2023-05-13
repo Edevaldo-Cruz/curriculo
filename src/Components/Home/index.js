@@ -2,12 +2,11 @@ import { useEffect } from "react";
 import { Row } from "antd";
 import Slider from "react-slick";
 import lottie from "lottie-web";
-//
 import img from "../../Asset/63487-programming-computer.gif";
 import animationData from "../../Asset/63487-programming-computer.json";
 import { RiReactjsLine, RiGithubLine } from "react-icons/ri";
 import { BsGit } from "react-icons/bs";
-import { BsLinkedin, BsGithub, BsDownload, BsWhatsapp } from "react-icons/bs";
+import { BsDownload, BsWhatsapp } from "react-icons/bs";
 import { SiCsharp } from "react-icons/si";
 import { SiMicrosoftsqlserver } from "react-icons/si";
 import {
@@ -165,6 +164,68 @@ export default function Home({ mobileScreen }) {
     </div>,
   ];
 
+  const text = {
+    salutation: "👋🏽Ola, meu nome é",
+    name: "Edevaldo,",
+    text: (
+      <SubText>
+        sou um desenvolvedor Full Stack com experiência em C# e React.
+        <br />
+        <br />
+        Bem-vindo ao meu portfólio!
+        <br />
+        <br />
+        Sinta-se à vontade para explorar e se desejar, estou aberto a conversar,
+        ouvir suas opiniões e receber seu valioso feedback.
+        <br />
+        <br />
+        Será um prazer tê-lo por aqui!😉
+      </SubText>
+    ),
+    secondText: (
+      <SubText>
+        Não hesite em clicar nos links de WhatsApp e currículo para descobrir
+        mais sobre mim e meu trabalho!
+        <br />
+        Estou animado para compartilhar minhas habilidades e experiências com
+        você e ver como posso ajudar em seu próximo projeto.
+        <br />
+        <br />
+        Não perca a oportunidade de se conectar e explorar como podemos
+        trabalhar juntos
+      </SubText>
+    ),
+    technologyAndSkillText:
+      "Abaixo você encontrará uma lista de tecnologias com as quais trabalho diariamente, assim como outras com as quais desenvolvi projetos anteriormente.",
+    link: (
+      <>
+        <LinkCurriculum href="https://1drv.ms/b/s!AtWvlvg_BPqhlNdJIECkJIiKiAxd-A?e=X2EA3G">
+          Curriculo
+          <BsDownload size={25} style={{ marginLeft: "10px" }} />
+        </LinkCurriculum>
+        <Row>
+          <BtnWhatsapp href="https://wa.me/32988634755?text=Oii,%20acabei%20de%20ver%20seu%20portfólio,%20pode%20conversar?">
+            <BsWhatsapp />
+            Vamos conversar
+          </BtnWhatsapp>
+        </Row>
+      </>
+    ),
+    socialNetwork: (
+      <SocialNetwork>
+        <BtnSocial
+          href="https://www.linkedin.com/in/edevaldo-cruz-8586a8a4/"
+          target="_blank"
+        >
+          <IconLinkedin size={25} />
+        </BtnSocial>
+        <BtnSocial href="https://github.com/Edevaldo-Cruz" target="_blank">
+          <IconGitHub size={25} />
+        </BtnSocial>
+      </SocialNetwork>
+    ),
+  };
+
   useEffect(() => {
     const container = document.getElementById("animation-container");
     const anim = lottie.loadAnimation({
@@ -195,22 +256,9 @@ export default function Home({ mobileScreen }) {
           </ContainerPhotoMobile>
 
           <ContainerSalutationMobile>
-            <Text>👋🏽Ola, meu nome é </Text>
-            <HighlightedText>Edevaldo,</HighlightedText>
-            <SubText>
-              sou um desenvolvedor Full Stack com experiência em C# e React.
-              <br />
-              <br />
-              Bem-vindo ao meu portfólio!
-              <br />
-              <br />
-              Sinta-se à vontade para explorar e se desejar, estou aberto a
-              conversar, ouvir suas opiniões e receber seu valioso feedback.
-              <br />
-              <br />
-              Será um prazer tê-lo por aqui!😉
-            </SubText>
-
+            <Text>{text.salutation}</Text>
+            <HighlightedText>{text.name}</HighlightedText>
+            {text.text}
             <div
               style={{
                 display: "flex",
@@ -218,53 +266,20 @@ export default function Home({ mobileScreen }) {
                 width: "100%",
               }}
             >
-              <SocialNetwork>
-                <BtnSocial
-                  href="https://www.linkedin.com/in/edevaldo-cruz-8586a8a4/"
-                  target="_blank"
-                >
-                  <IconLinkedin size={25} />
-                </BtnSocial>
-                <BtnSocial
-                  href="https://github.com/Edevaldo-Cruz"
-                  target="_blank"
-                >
-                  <IconGitHub size={25} />
-                </BtnSocial>
-              </SocialNetwork>
+              {text.socialNetwork}
             </div>
           </ContainerSalutationMobile>
 
           <ContainerBtnMobile>
             <div>
-              <SubText>
-                Não hesite em clicar nos links de WhatsApp e currículo para
-                descobrir mais sobre mim e meu trabalho! Estou animado para
-                compartilhar minhas habilidades e experiências com você e ver
-                como posso ajudar em seu próximo projeto. Não perca a
-                oportunidade de se conectar e explorar como podemos trabalhar
-                juntos
-              </SubText>
-              <LinkCurriculum href="https://1drv.ms/b/s!AtWvlvg_BPqhlNdJIECkJIiKiAxd-A?e=X2EA3G">
-                Curriculo
-                <BsDownload size={25} style={{ marginLeft: "10px" }} />
-              </LinkCurriculum>
-              <Row>
-                <BtnWhatsapp href="https://wa.me/32988634755?text=Oii,%20acabei%20de%20ver%20seu%20portfólio,%20pode%20conversar?">
-                  <BsWhatsapp />
-                  Vamos conversar
-                </BtnWhatsapp>
-              </Row>
+              {text.secondText}
+              {text.link}
             </div>
           </ContainerBtnMobile>
 
           <ContainerCard>
             <HighlightedText>Tecnologias e habilidades</HighlightedText>
-            <SubText>
-              Abaixo você encontrará uma lista de tecnologias com as quais
-              trabalho diariamente, assim como outras com as quais desenvolvi
-              projetos anteriormente.
-            </SubText>
+            <SubText>{text.technologyAndSkillText}</SubText>
             <Slider {...settings}>{cards}</Slider>
           </ContainerCard>
         </Container>
@@ -272,22 +287,9 @@ export default function Home({ mobileScreen }) {
         <>
           <Container>
             <ContainerSalutation span={6}>
-              <Text>👋🏽Ola, meu nome é </Text>
-              <HighlightedText>Edevaldo,</HighlightedText>
-              <SubText>
-                sou um desenvolvedor Full Stack com experiência em C# e React.
-                <br />
-                <br />
-                Bem-vindo ao meu portfólio!
-                <br />
-                <br />
-                Sinta-se à vontade para explorar e se desejar, estou aberto a
-                conversar, ouvir suas opiniões e receber seu valioso feedback.
-                <br />
-                <br />
-                Será um prazer tê-lo por aqui!😉
-              </SubText>
-
+              <Text>{text.salutation}</Text>
+              <HighlightedText>{text.name}</HighlightedText>
+              {text.text}
               <div
                 style={{
                   display: "flex",
@@ -295,24 +297,7 @@ export default function Home({ mobileScreen }) {
                   width: "100%",
                 }}
               >
-                <SocialNetwork>
-                  <BtnSocial
-                    href="https://www.linkedin.com/in/edevaldo-cruz-8586a8a4/"
-                    target="_blank"
-                  >
-                    <BsLinkedin
-                      size={25}
-                      color={"#CCC"}
-                      style={{ marginRight: "1rem" }}
-                    />
-                  </BtnSocial>
-                  <BtnSocial
-                    href="https://github.com/Edevaldo-Cruz"
-                    target="_blank"
-                  >
-                    <BsGithub size={25} color={"#CCC"} />
-                  </BtnSocial>
-                </SocialNetwork>
+                {text.socialNetwork}
               </div>
             </ContainerSalutation>
             <ContainerPhoto span={12}>
@@ -320,38 +305,14 @@ export default function Home({ mobileScreen }) {
             </ContainerPhoto>
             <ContainerBtn span={6}>
               <div>
-                <SubText>
-                  Não hesite em clicar nos links de WhatsApp e currículo para
-                  descobrir mais sobre mim e meu trabalho!
-                  <br />
-                  Estou animado para compartilhar minhas habilidades e
-                  experiências com você e ver como posso ajudar em seu próximo
-                  projeto.
-                  <br />
-                  <br />
-                  Não perca a oportunidade de se conectar e explorar como
-                  podemos trabalhar juntos
-                </SubText>
-                <LinkCurriculum href="https://1drv.ms/b/s!AtWvlvg_BPqhlNdJIECkJIiKiAxd-A?e=X2EA3G">
-                  Curriculo
-                  <BsDownload size={25} style={{ marginLeft: "10px" }} />
-                </LinkCurriculum>
-                <Row>
-                  <BtnWhatsapp href="https://wa.me/32988634755?text=Oii,%20acabei%20de%20ver%20seu%20portfólio,%20pode%20conversar?">
-                    <BsWhatsapp />
-                    Vamos conversar
-                  </BtnWhatsapp>
-                </Row>
+                {text.secondText}
+                {text.link}
               </div>
             </ContainerBtn>
 
             <ContainerCard>
               <HighlightedText>Tecnologias e habilidades</HighlightedText>
-              <SubText>
-                Abaixo você encontrará uma lista de tecnologias com as quais
-                trabalho diariamente, assim como outras com as quais desenvolvi
-                projetos anteriormente.
-              </SubText>
+              <SubText>{text.technologyAndSkillText}</SubText>
               <Slider {...settings}>{cards}</Slider>
             </ContainerCard>
           </Container>
