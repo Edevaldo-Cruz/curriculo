@@ -4,7 +4,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 100vw;
   z-index: 1;
-  padding-block: 8%;
+  padding-block: 0 8%;
+
+  @media (max-width: 600px) {
+    padding-block: 8%;
+  }
 `;
 
 export const ContainerTitle = styled.div`

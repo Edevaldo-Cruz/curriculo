@@ -112,6 +112,8 @@ export const BtnWhatsapp = styled.a`
   border: 2px solid #7b4ae2;
   border-radius: 2rem;
   font-weight: 700;
+  margin-left: auto;
+  margin-right: auto;
 
   &:hover {
     color: ${(props) => props.theme.colorTextDefault};
