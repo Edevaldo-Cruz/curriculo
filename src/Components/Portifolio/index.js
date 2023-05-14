@@ -242,7 +242,12 @@ export default function Portifolio({ mobileScreen }) {
             justifyContent: "space-between",
           }}
         >
-          <Col span={18}>
+          <Col
+            span={12}
+            style={{
+              marginLeft: "10%",
+            }}
+          >
             <Subtitle>Projetos</Subtitle>
           </Col>
 
@@ -283,7 +288,7 @@ export default function Portifolio({ mobileScreen }) {
               style={{
                 display: "flex",
                 justifyContent: "end",
-                width: "100%",
+                width: "20%",
                 margin: "0 0 1rem 0",
               }}
             >

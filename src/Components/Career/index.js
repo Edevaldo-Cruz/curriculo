@@ -26,6 +26,7 @@ import { Col } from "antd";
 export default function Career({ mobileScreen }) {
   const [value, setValue] = useState(0);
   const [previous, setPrevious] = useState(0);
+
   const Info = [
     {
       title: "Dev Junior Full stack",
@@ -53,6 +54,7 @@ export default function Career({ mobileScreen }) {
       text: "Durante o meu estágio na empresa Indica, eu era responsável por realizar a organização e escrituração dos documentos de acordo com a sua respectiva classificação contábil. Além disso, eu realizava a conciliação bancária para garantir a correta conciliação entre as movimentações financeiras da empresa e as informações registradas nos extratos bancários. Essas atividades eram executadas com o objetivo de garantir a organização e correta contabilização das informações financeiras da empresa, bem como o correto fluxo de caixa e a identificação de possíveis erros ou inconsistências nas movimentações bancárias.",
     },
   ];
+
   const VALUE_TEXTS = [
     <>
       {mobileScreen === true ? (
@@ -193,6 +195,7 @@ export default function Career({ mobileScreen }) {
       )}
     </>,
   ];
+
   const settings = {
     dots: false,
     infinite: false,
@@ -315,13 +318,16 @@ export default function Career({ mobileScreen }) {
                 paddingTop: "25px",
               }}
             >
-              <img
-                src={PhotoIndica}
-                width={"150px"}
-                height={"50px"}
-                alt="logo SS"
-                style={{ marginInline: "auto" }}
-              />
+              <div style={{ backgroundColor: "red" }}>
+                <img
+                  src={PhotoIndica}
+                  width={"150px"}
+                  height={"50px"}
+                  alt="logo SS"
+                  style={{ marginInline: "auto" }}
+                />
+              </div>
+
               <Company>Indica Assessoria Empresarial</Company>
               <DateCompany>01/13-01/14</DateCompany>
             </ContainerCompanies>

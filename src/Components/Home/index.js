@@ -159,9 +159,9 @@ export default function Home({ mobileScreen }) {
     <div>
       <ProfessionCard>
         <TbBrandKotlin size={mobileScreen === true ? 35 : 70} color={"#ccc"} />
+        <TitleCardProfession>Kotlin</TitleCardProfession>
       </ProfessionCard>
     </div>,
-    <TitleCardProfession>Kotlin</TitleCardProfession>,
   ];
 
   const text = {

@@ -56,9 +56,9 @@ export const ContainerTitle = styled.div`
   background-color: rgba(123, 74, 226, 0.4);
   border-radius: 0.3rem;
 
-  /* @media (max-width: 600px) {
-    margin-top: 8rem;
-  } */
+  @media (max-width: 600px) {
+    margin-left: 10%;
+  }
 `;
 
 export const Title = styled.p`
@@ -79,6 +79,7 @@ export const Name = styled.p`
   @media (max-width: 600px) {
     font-size: 26px;
     margin: 1rem;
+    margin-left: 10%;
   }
 `;
 

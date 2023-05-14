@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  max-width: 100vw;
   z-index: 1;
   padding-block: 8%;
 `;
@@ -13,6 +13,7 @@ export const Contents = styled.div`
 export const ContainerTitle = styled.div`
   width: 12rem;
   height: 1.8rem;
+  margin-left: 10%;
   padding-left: 10px;
   background-color: rgba(123, 74, 226, 0.4);
   border-radius: 0.3rem;
