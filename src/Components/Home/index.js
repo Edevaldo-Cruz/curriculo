@@ -159,9 +159,9 @@ export default function Home({ mobileScreen }) {
     <div>
       <ProfessionCard>
         <TbBrandKotlin size={mobileScreen === true ? 35 : 70} color={"#ccc"} />
-        <TitleCardProfession>Kotlin</TitleCardProfession>
       </ProfessionCard>
     </div>,
+    <TitleCardProfession>Kotlin</TitleCardProfession>,
   ];
 
   const text = {
@@ -209,7 +209,6 @@ export default function Home({ mobileScreen }) {
         </LinkCurriculum>
         <Row>
           <BtnWhatsapp
-            style={{}}
             href="https://wa.me/32988634755?text=Olá,%20acabei%20de%20ver%20seu%20portfólio,%20podemos%20conversar?"
             target="_blank"
           >
