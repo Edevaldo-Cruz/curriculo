@@ -187,26 +187,31 @@ export default function Home({ mobileScreen }) {
         Não hesite em clicar nos links de WhatsApp e currículo para descobrir
         mais sobre mim e meu trabalho!
         <br />
+        <br />
         Estou animado para compartilhar minhas habilidades e experiências com
         você e ver como posso ajudar em seu próximo projeto.
         <br />
         <br />
         Não perca a oportunidade de se conectar e explorar como podemos
-        trabalhar juntos
+        trabalhar juntos.
       </SubText>
     ),
     technologyAndSkillText:
       "Abaixo você encontrará uma lista de tecnologias com as quais trabalho diariamente, assim como outras com as quais desenvolvi projetos anteriormente.",
     link: (
       <>
-        <LinkCurriculum href="https://1drv.ms/b/s!AtWvlvg_BPqhlNdJIECkJIiKiAxd-A?e=X2EA3G">
+        <LinkCurriculum
+          href="https://1drv.ms/b/s!AtWvlvg_BPqhlNdJIECkJIiKiAxd-A?e=X2EA3G"
+          target="_blank"
+        >
           Curriculo
           <BsDownload size={25} style={{ marginLeft: "10px" }} />
         </LinkCurriculum>
         <Row>
           <BtnWhatsapp
             style={{}}
-            href="https://wa.me/32988634755?text=Oii,%20acabei%20de%20ver%20seu%20portfólio,%20pode%20conversar?"
+            href="https://wa.me/32988634755?text=Olá,%20acabei%20de%20ver%20seu%20portfólio,%20podemos%20conversar?"
+            target="_blank"
           >
             <BsWhatsapp />
             Vamos conversar

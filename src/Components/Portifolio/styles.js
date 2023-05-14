@@ -132,7 +132,7 @@ export const ContainerOnline = styled.div`
   border-radius: 0.3rem;
 
   @media (max-width: 600px) {
-    width: 3rem;
+    margin-bottom: 0.8rem;
   }
 `;
 
