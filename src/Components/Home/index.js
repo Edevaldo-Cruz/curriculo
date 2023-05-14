@@ -204,7 +204,10 @@ export default function Home({ mobileScreen }) {
           <BsDownload size={25} style={{ marginLeft: "10px" }} />
         </LinkCurriculum>
         <Row>
-          <BtnWhatsapp href="https://wa.me/32988634755?text=Oii,%20acabei%20de%20ver%20seu%20portfólio,%20pode%20conversar?">
+          <BtnWhatsapp
+            style={{}}
+            href="https://wa.me/32988634755?text=Oii,%20acabei%20de%20ver%20seu%20portfólio,%20pode%20conversar?"
+          >
             <BsWhatsapp />
             Vamos conversar
           </BtnWhatsapp>
