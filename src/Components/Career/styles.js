@@ -121,7 +121,8 @@ export const ContainerInfo = styled(Row)`
   align-items: center;
   height: 25rem;
   margin-inline: 5%;
-  background-color: rgba(240, 255, 255, 0.2);
+  //background-color: rgba(240, 255, 255, 0.5);
+  background-color: rgba(123, 74, 226, 0.5);
 `;
 
 export const Company = styled.p`
