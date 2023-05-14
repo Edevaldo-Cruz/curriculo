@@ -5,6 +5,7 @@ import PhotoExercito from "../../Asset/exercito.png";
 import PhotoDossie from "../../Asset/dossie.jpg";
 import PhotoSandra from "../../Asset/contabilidade.png";
 import PhotoIndica from "../../Asset/indica.webp";
+import { IoIosBusiness } from "react-icons/io";
 import {
   Container,
   ContainerTitle,
@@ -12,7 +13,6 @@ import {
   Title,
   HighlightedText,
   Text,
-  Btn,
   ContainerInfoMobile,
   TitleMobile,
   SubtitleMobile,
@@ -21,7 +21,7 @@ import {
   Company,
   DateCompany,
 } from "./styles";
-import { Row, Col } from "antd";
+import { Col } from "antd";
 
 export default function Career({ mobileScreen }) {
   const [value, setValue] = useState(0);
@@ -30,17 +30,17 @@ export default function Career({ mobileScreen }) {
     {
       title: "Dev Junior Full stack",
       subtitle: "SS Business",
-      text: "Eu sou responsável pelo desenvolvimento FullStack de aplicações web. No back-end, trabalho com Framework ASP.NET, EFCore, arquitetura MVC, SQL Server, WebAPI, REST. Já no front-end, utilizo React, Razor, HTML, CSS, Javascript, Bootstrap, DevExpress, JQuery e AJAX. \n \n Entre as minhas atividades, estão a implementação de novas funcionalidades, identificação e correção de bugs, manipulação de bancos de dados, criação de designs UX funcionais e aplicação de conceitos de metodologias ágeis como Scrum e Kanban, Clean Code e Clean Architecture. Tudo isso com o objetivo de desenvolver soluções que atendam às necessidades dos usuários e da empresa, mantendo sempre a qualidade do código e da arquitetura do sistema.",
+      text: "Eu sou responsável pelo desenvolvimento FullStack de aplicações web. No back-end, trabalho com Framework ASP.NET, EFCore, arquitetura MVC, SQL Server, WebAPI, REST. Já no front-end, utilizo React, Razor, HTML, CSS, Javascript, Bootstrap. \n \n Entre as minhas atividades, estão a implementação de novas funcionalidades, identificação e correção de bugs, manipulação de bancos de dados, criação de designs UX funcionais. Tudo isso com o objetivo de desenvolver soluções que atendam às necessidades dos usuários e da empresa, mantendo sempre a qualidade do código e da arquitetura do sistema.",
     },
     {
       title: "3° Sargento técnico de Contabilidade",
       subtitle: "Exército Brasileiro",
-      text: "Na posição de 3° Sargento e desempenhei diversas funções de liderança e coordenação. Como responsável por uma unidade militar, era minha tarefa garantir que todas as atividades fosse realizadas em conformidade com as diretrizes e orientações recebidas do Comando. Dentre as minhas principais responsabilidades, destaca-se a elaboração e controle das notas de empenho, documentos que registram as despesas realizadas pela unidade militar. Além disso, monitorava as notas de crédito e os indicadores de desempenho do setor de Aquisições, visando avaliar o desempenho da equipe e assegurar que os objetivos fossem alcançados. Outra importante função era prestar apoio ao setor de Licitação e ao setor de Contratos, ajudando a identificar as necessidades da unidade militar em termos de aquisições de materiais e serviços, e colaborando na elaboração de editais e contratos. Em síntese, como 3° Sargento no Exército, eu exercia atividades de liderança e coordenação, elaborando e controlando notas de empenho, acompanhando as notas de crédito e os indicadores de desempenho do setor de Aquisições, e oferecendo apoio ao setor de Licitação e ao setor de Contratos. Era um trabalho desafiador e de grande importância para o bom funcionamento da unidade militar.",
+      text: "Na posição de 3° Sargento e desempenhei diversas funções de liderança e coordenação. Dentre as minhas principais responsabilidades, destaca-se a elaboração e controle das notas de empenho, documentos que registram as despesas realizadas pela unidade militar. Além disso, monitorava as notas de crédito e os indicadores de desempenho do setor de Aquisições. Outra importante função era prestar apoio ao setor de Licitação e ao setor de Contratos. Em síntese, como 3° Sargento no Exército, eu exercia atividades de liderança e coordenação, elaborando e controlando notas de empenho, acompanhando as notas de crédito e oferecendo apoio ao setor de Licitação e ao setor de Contratos. Era um trabalho desafiador e de grande importância para o bom funcionamento das unidades militares.",
     },
     {
       title: "Suporte Técnico",
       subtitle: "Dossie Sistema",
-      text: "Na empresa Dossiê Sistemas, eu era responsável por prestar suporte técnico remoto e por telefone para os programas contábeis, fiscais e de departamento pessoal utilizados pelos clientes. Durante o meu trabalho, eu elaborava relatórios sobre erros identificados nos programas e sugestões de melhorias para os mesmos. Além disso, eu realizava testes nas correções de erros e nas implantações de novas funcionalidades para garantir a qualidade e eficiência dos sistemas utilizados pelos clientes. Essas atividades eram realizadas com o objetivo de garantir o bom funcionamento dos sistemas e a satisfação dos clientes da empresa.",
+      text: "Na Dossiê Sistemas, eu exercia a função de fornecer assistência técnica remota e por telefone aos programas contábeis, fiscais e de departamento pessoal utilizados pelos clientes. Durante meu trabalho, gerava relatórios acerca dos erros encontrados nos programas e sugestões de melhorias. Também realizava testes nas correções de erros e na implantação de novas funcionalidades para assegurar a qualidade e eficiência dos sistemas utilizados pelos clientes. Essas atividades tinham como propósito garantir o adequado funcionamento dos sistemas e a satisfação dos clientes da empresa.",
     },
     {
       title: "Auxiliar Contabil",
@@ -114,13 +114,14 @@ export default function Career({ mobileScreen }) {
         </ContainerInfoMobile>
       ) : (
         <ContainerInfo>
-          <Col span={6}>
-            <img
+          <Col span={6} style={{ display: "flex", justifyContent: "center" }}>
+            {/* <img
               src={PhotoDossie}
               width={"350px"}
               height={"350px"}
               alt="logo SS"
-            />
+            /> */}
+            <IoIosBusiness size={250} />
           </Col>
           <Col span={18}>
             <h1>{Info[2].title}</h1>

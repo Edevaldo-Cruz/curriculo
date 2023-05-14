@@ -14,7 +14,6 @@ import {
 
 export default function About({ mobileScreen }) {
   const [showFullText, setShowFullText] = useState(false);
-
   const text = {
     info: (
       <>
@@ -52,6 +51,7 @@ export default function About({ mobileScreen }) {
   function toggleShowFullText() {
     setShowFullText(!showFullText);
   }
+
   return (
     <>
       {mobileScreen === true ? (

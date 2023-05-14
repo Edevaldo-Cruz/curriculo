@@ -44,7 +44,7 @@ export const HighlightedText = styled.p`
 `;
 
 export const Text = styled.p`
-  width: 100%;
+  width: 95%;
   text-align: start;
   font-size: 20px;
   color: ${(props) => props.theme.colorTextDefault};
@@ -117,6 +117,9 @@ export const TextMobile = styled.p`
 `;
 
 export const ContainerInfo = styled(Row)`
+  display: flex;
+  align-items: center;
+  height: 25rem;
   margin-inline: 5%;
   background-color: rgba(240, 255, 255, 0.2);
 `;
