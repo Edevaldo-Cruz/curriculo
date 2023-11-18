@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Slider from "react-slick";
+import PhotoMarlin from "../../Asset/Marlin.png";
 import PhotoSS from "../../Asset/ss.png";
 import PhotoExercito from "../../Asset/exercito.png";
 import PhotoDossie from "../../Asset/dossie.jpg";
@@ -29,9 +30,14 @@ export default function Career({ mobileScreen }) {
 
   const Info = [
     {
+      title: "Dev BackEnd",
+      subtitle: "Marlin",
+      text: "Como desenvolvedor backend, minha responsabilidade abrange não apenas a criação e manutenção de funcionalidades em sistemas, mas também análise e correção de bugs. Utilizo C#, SQL Server e aplico os princípios SOLID para garantir a robustez e a eficiência do código. Meu trabalho envolve a implementação de Testes Unitários (Xunit) e a aplicação de abordagens como TDD e DDD para assegurar a qualidade e escalabilidade do software. Além disso, colaboro ativamente com a equipe em discussões técnicas, contribuindo para aprimorar constantemente nossos sistemas. Isso inclui participar da resolução de problemas, propor melhorias na arquitetura do sistema e fornecer suporte na identificação e correção ágil de bugs, garantindo assim um ambiente operacional estável e de alto desempenho.",
+    },
+    {
       title: "Dev Junior Full stack",
       subtitle: "SS Business",
-      text: "Eu sou responsável pelo desenvolvimento FullStack de aplicações web. No back-end, trabalho com Framework ASP.NET, EFCore, arquitetura MVC, SQL Server, WebAPI, REST. Já no front-end, utilizo React, Razor, HTML, CSS, Javascript, Bootstrap. \n \n Entre as minhas atividades, estão a implementação de novas funcionalidades, identificação e correção de bugs, manipulação de bancos de dados, criação de designs UX funcionais. Tudo isso com o objetivo de desenvolver soluções que atendam às necessidades dos usuários e da empresa, mantendo sempre a qualidade do código e da arquitetura do sistema.",
+      text: "Fui responsável pelo desenvolvimento FullStack de aplicações web. No back-end, trabalhei com Framework ASP.NET, EFCore, seguindo a arquitetura MVC, e utilizei SQL Server e WebAPI para suporte às operações. No front-end, utilizei React, Razor, HTML, CSS, Javascript e Bootstrap. Minhas atividades incluíam a implementação de novas funcionalidades, a identificação e correção de bugs, a manipulação de bancos de dados e a criação de designs UX funcionais. Tudo isso visando desenvolver soluções que atendessem às necessidades dos usuários e da empresa, mantendo sempre a qualidade do código e da arquitetura do sistema.",
     },
     {
       title: "3° Sargento técnico de Contabilidade",
@@ -68,7 +74,12 @@ export default function Career({ mobileScreen }) {
       ) : (
         <ContainerInfo>
           <Col span={6}>
-            <img src={PhotoSS} width={"350px"} height={"350px"} alt="logo SS" />
+            <img
+              src={PhotoMarlin}
+              width={"350px"}
+              height={"350px"}
+              alt="logo Marlin"
+            />
           </Col>
           <Col span={18}>
             <h1>{Info[0].title}</h1>
@@ -90,12 +101,7 @@ export default function Career({ mobileScreen }) {
       ) : (
         <ContainerInfo>
           <Col span={6}>
-            <img
-              src={PhotoExercito}
-              width={"350px"}
-              height={"350px"}
-              alt="logo SS"
-            />
+            <img src={PhotoSS} width={"350px"} height={"350px"} alt="logo SS" />
           </Col>
           <Col span={18}>
             <h1>{Info[1].title}</h1>
@@ -116,14 +122,13 @@ export default function Career({ mobileScreen }) {
         </ContainerInfoMobile>
       ) : (
         <ContainerInfo>
-          <Col span={6} style={{ display: "flex", justifyContent: "center" }}>
-            {/* <img
-              src={PhotoDossie}
+          <Col span={6}>
+            <img
+              src={PhotoExercito}
               width={"350px"}
               height={"350px"}
-              alt="logo SS"
-            /> */}
-            <IoIosBusiness size={250} />
+              alt="logo Exercito"
+            />
           </Col>
           <Col span={18}>
             <h1>{Info[2].title}</h1>
@@ -144,13 +149,8 @@ export default function Career({ mobileScreen }) {
         </ContainerInfoMobile>
       ) : (
         <ContainerInfo>
-          <Col span={6}>
-            <img
-              src={PhotoSandra}
-              width={"350px"}
-              height={"350px"}
-              alt="logo SS"
-            />
+          <Col span={6} style={{ display: "flex", justifyContent: "center" }}>
+            <IoIosBusiness size={250} />
           </Col>
           <Col span={18}>
             <h1>{Info[3].title}</h1>
@@ -171,6 +171,33 @@ export default function Career({ mobileScreen }) {
         </ContainerInfoMobile>
       ) : (
         <ContainerInfo>
+          <Col span={6}>
+            <img
+              src={PhotoSandra}
+              width={"350px"}
+              height={"350px"}
+              alt="logo Contabilidade"
+            />
+          </Col>
+          <Col span={18}>
+            <h1>{Info[4].title}</h1>
+            <h2 style={{ marginInline: "3%" }}>{Info[4].subtitle}</h2>
+            <Text>{Info[4].text}</Text>
+          </Col>
+        </ContainerInfo>
+      )}
+    </>,
+    <>
+      {mobileScreen === true ? (
+        <ContainerInfoMobile>
+          <div>
+            <TitleMobile>{Info[5].title}</TitleMobile>
+            <SubtitleMobile>{Info[5].subtitle}</SubtitleMobile>
+            <TextMobile>{Info[5].text}</TextMobile>
+          </div>
+        </ContainerInfoMobile>
+      ) : (
+        <ContainerInfo>
           <Col
             span={6}
             style={{
@@ -183,13 +210,13 @@ export default function Career({ mobileScreen }) {
               src={PhotoIndica}
               width={"350px"}
               height={"150px"}
-              alt="logo SS"
+              alt="logo Indica"
             />
           </Col>
           <Col span={18}>
-            <h1>{Info[4].title}</h1>
-            <h2 style={{ marginInline: "3%" }}>{Info[4].subtitle}</h2>
-            <Text>{Info[4].text}</Text>
+            <h1>{Info[5].title}</h1>
+            <h2 style={{ marginInline: "3%" }}>{Info[5].subtitle}</h2>
+            <Text>{Info[5].text}</Text>
           </Col>
         </ContainerInfo>
       )}
@@ -261,6 +288,19 @@ export default function Career({ mobileScreen }) {
           <div>
             <ContainerCompanies onClick={() => handleIndexClick(0)}>
               <img
+                src={PhotoMarlin}
+                width={"75px"}
+                height={"75px"}
+                alt="logo Marlin"
+                style={{ marginInline: "auto" }}
+              />
+              <Company>Marlin</Company>
+              <DateCompany>06/23</DateCompany>
+            </ContainerCompanies>
+          </div>
+          <div>
+            <ContainerCompanies onClick={() => handleIndexClick(1)}>
+              <img
                 src={PhotoSS}
                 width={"75px"}
                 height={"75px"}
@@ -268,11 +308,11 @@ export default function Career({ mobileScreen }) {
                 style={{ marginInline: "auto" }}
               />
               <Company>SS Business</Company>
-              <DateCompany>05/22</DateCompany>
+              <DateCompany>05/22-06/23</DateCompany>
             </ContainerCompanies>
           </div>
           <div>
-            <ContainerCompanies onClick={() => handleIndexClick(1)}>
+            <ContainerCompanies onClick={() => handleIndexClick(2)}>
               <img
                 src={PhotoExercito}
                 width={"75px"}
@@ -285,7 +325,7 @@ export default function Career({ mobileScreen }) {
             </ContainerCompanies>
           </div>
           <div>
-            <ContainerCompanies onClick={() => handleIndexClick(2)}>
+            <ContainerCompanies onClick={() => handleIndexClick(3)}>
               <img
                 src={PhotoDossie}
                 width={"75px"}
@@ -298,7 +338,7 @@ export default function Career({ mobileScreen }) {
             </ContainerCompanies>
           </div>
           <div>
-            <ContainerCompanies onClick={() => handleIndexClick(3)}>
+            <ContainerCompanies onClick={() => handleIndexClick(4)}>
               <img
                 src={PhotoSandra}
                 width={"75px"}
@@ -312,7 +352,7 @@ export default function Career({ mobileScreen }) {
           </div>
           <div>
             <ContainerCompanies
-              onClick={() => handleIndexClick(4)}
+              onClick={() => handleIndexClick(5)}
               style={{
                 width: "175px",
                 paddingTop: "25px",
